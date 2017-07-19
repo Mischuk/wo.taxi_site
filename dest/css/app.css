@@ -1699,6 +1699,7 @@ article ol li:before {
 #modal-locate .modal-bottom ul li ul.hidden {
   display: none;
 }
+#modal-success-signup,
 #modal-ty,
 #modal-manager {
   max-width: 570px;
@@ -1706,16 +1707,20 @@ article ol li:before {
   padding-right: 0;
   padding-bottom: 0;
 }
+#modal-success-signup .modal-title,
 #modal-ty .modal-title,
 #modal-manager .modal-title,
+#modal-success-signup .modal-footer,
 #modal-ty .modal-footer,
 #modal-manager .modal-footer {
   padding-left: 20px;
   padding-right: 20px;
 }
 @media only screen and (min-width: 768px) {
+  #modal-success-signup .modal-title,
   #modal-ty .modal-title,
   #modal-manager .modal-title,
+  #modal-success-signup .modal-footer,
   #modal-ty .modal-footer,
   #modal-manager .modal-footer {
     padding-left: 40px;
@@ -1723,40 +1728,49 @@ article ol li:before {
   }
 }
 @media only screen and (min-width: 992px) {
+  #modal-success-signup .modal-title,
   #modal-ty .modal-title,
   #modal-manager .modal-title,
+  #modal-success-signup .modal-footer,
   #modal-ty .modal-footer,
   #modal-manager .modal-footer {
     padding-left: 60px;
     padding-right: 60px;
   }
 }
+#modal-success-signup .modal-title,
 #modal-ty .modal-title,
 #modal-manager .modal-title {
   text-align: left;
 }
+#modal-success-signup .modal-title h1,
 #modal-ty .modal-title h1,
 #modal-manager .modal-title h1 {
   margin-bottom: 15px;
 }
+#modal-success-signup .modal-title p,
 #modal-ty .modal-title p,
 #modal-manager .modal-title p {
   margin-bottom: 10px;
 }
+#modal-success-signup .modal-title ul,
 #modal-ty .modal-title ul,
 #modal-manager .modal-title ul {
   padding-bottom: 20px;
 }
+#modal-success-signup .modal-title ul li,
 #modal-ty .modal-title ul li,
 #modal-manager .modal-title ul li {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
+#modal-success-signup .modal-title ul li a,
 #modal-ty .modal-title ul li a,
 #modal-manager .modal-title ul li a {
   color: #1d5d8b;
 }
+#modal-success-signup .modal-title ul li a:hover,
 #modal-ty .modal-title ul li a:hover,
 #modal-manager .modal-title ul li a:hover {
   color: #00b7f4;

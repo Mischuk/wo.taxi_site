@@ -327,15 +327,13 @@ $(function() {
           return false;
         }
       });
+
+      $('.signup-form .step-2 button[type=submit]').on('click', function(){
+        $('#modal-success-signup-call').trigger('click');
+        return false;
+      });
     }
     signup();
-
-
-
-
-
-
-
 
 
     /// dropzone
@@ -462,6 +460,19 @@ $(function() {
         }, 100);
     });
     /// end dropzone
+
+
+    if ( $('.m_signup').length ) {
+      window.addEventListener("beforeunload", function (e) {
+        saveFormData();
+
+        (e || window.event).returnValue = null;
+        return null;
+      });
+      function saveFormData() {
+        console.log('saved');
+      }
+    }
 
     //=include modules.js
 });
