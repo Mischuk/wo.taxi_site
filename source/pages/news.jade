@@ -1,0 +1,88 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Новости
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container
+    main
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Наш блог
+      .page-title
+        h2 Наш блог
+      .m_news-list
+        .news-item.medium
+          .image: a(href="#" style="background-image: url('images/news-item-1.png')")
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.large
+          .image: a(href="#" style="background-image: url('images/news-item-2.png')")
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+        .news-item.normal
+          .news-body
+            .title: a(href="#") Название новостной записи может быть длинным в несколько строк
+            .post-date 20 марта 2017
+            .desc
+              lorem(size="1")
+      .m_pagination
+        ul
+          li: a(class="prev" href="#")
+          li: a(href="#") 1
+          li: a(class="current" href="#") 2
+          li: a(href="#") 3
+          li: a(href="#") 4
+          li: a(href="#") 5
+          li: a(href="#") 6
+          li: a(href="#") 7
+          li: a(href="#") 8
+          li: a(href="#") 9
+          li: a(href="#") 10
+          li: a(class="next" href="#")

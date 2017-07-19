@@ -1,0 +1,208 @@
+.m_contacts
+  .toggle-map
+    text-align center
+    a
+      display inline-block
+      color $blue
+      background #edf1f2
+      &:hover
+        background $blue
+        color #fff
+      &:active
+        background $blue - 15%
+  .map
+    position relative
+    margin-top 20px
+    #map
+      width 100%
+      height 1000px
+      @media SM
+        height 800px
+    .ballons
+      position absolute
+      top 20px
+      left 0
+      width 100%
+      padding 0 15px
+      @media MD
+        clearfix()
+        text-align center
+        top 30px
+      @media LG
+        top 70px
+      &.is-hidden
+        display none
+      .local-map,
+      .tech-support
+        background #fff
+        box-shadow 0 0 3px 1px rgba(0,0,0,.2)
+        @media SM
+          max-width 500px
+          margin 0 auto
+        @media MD
+          display inline-block
+          vertical-align top
+          max-width 450px
+          text-align left
+        @media LG
+          width 500px
+          max-width none
+      .tech-support
+        margin-top 15px
+        @media MD
+          margin-top 0
+          margin-left 30px
+        .top
+          padding 15px
+          background #f2fafc
+          position relative
+          @media LG
+            padding 25px 50px
+          .label
+            exo()
+            font-size 20px
+            line-height 1
+            text-align center
+            margin-bottom 15px
+            @media XS
+              text-align left
+              padding-right 180px
+              margin-bottom 0
+          .action
+            text-align center
+            @media XS
+              position absolute
+              right 15px
+              top 50%
+              margin-top -25px
+            @media LG
+              right 50px
+            a
+              background $orange
+              color #fff
+              font-size 14px
+              padding 15px 20px
+              @media XS
+                padding 18px 30px
+        .bottom
+          padding 15px
+          font-size 14px
+          @media LG
+            padding 25px 50px
+          .label
+            color #666666
+          a
+            anim()
+            color $blue
+            &:hover
+              color $sky
+              text-decoration underline
+          li
+            margin-top 10px
+      .local-map
+        .info
+          .header
+            position relative
+            background #f2fafc
+            padding 15px
+            font-size 14px
+            @media LG
+              padding 25px 50px
+            > .label
+              margin-bottom 5px
+              @media XS
+                position absolute
+                left 15px
+                top 15px
+                line-height 38px
+              @media LG
+                left 50px
+                top 25px
+            .select-contrainer
+              position relative
+              padding-left 20px
+              @media XS
+                padding-left 105px
+              @media LG
+                padding-left 125px
+              &:after
+                content ''
+                background: url('../images/sprite.png') no-repeat 0 0;
+                width: 12px;
+                height: 16px;
+                position absolute
+                left 0
+                top 50%
+                margin-top -(@height/2)
+                @media XS
+                  left 85px
+                @media LG
+                  left 105px
+              .selectric-open
+                .selectric
+                  .button
+                    &:after
+                      border-top-color $orange
+              .selectric
+                border none
+                border-bottom 1px solid #c8c8c8
+                background none
+                .label
+                  font-size 14px
+                  color #000
+                  margin-left 0
+                .button
+                  background none
+              .selectric-items
+                border 1px solid #c8c8c8
+                background #fff
+                margin-top -1px
+                li
+                  font-size 14px
+                  &:hover,
+                  &.selected
+                    background $sky
+                    color #fff
+
+          .body
+            padding 15px
+            @media LG
+              padding 25px 50px
+            .place
+              font-size 14px
+              display none
+              &.current
+                display block
+              .row
+                margin-bottom 15px
+                &:last-child
+                  margin-bottom 0
+              .label
+                color #666666
+              .value
+                a
+                  anim()
+                  color $blue
+                  &:hover
+                    color $sky
+              .socials
+                .label, ul, li
+                  display inline-block
+                  vertical-align middle
+                a
+                  anim()
+                  display block
+                  width 20px
+                  height 20px
+                  background-image url("../images/sprite.png")
+                  background-repeat none
+                  &:hover
+                    opacity .8
+                  &.vk
+                    background-position -100px 0
+                  &.fb
+                    background-position -150px 0
+                  &.ok
+                    background-position -50px 0
+
+

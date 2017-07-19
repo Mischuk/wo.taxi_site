@@ -1,0 +1,139 @@
+doctype html
+html(lang="ru")
+  head
+    title UI modules
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel="stylesheet" type="text/css")
+    // Styles
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.css")
+    // JS
+    script(src="js/modernizr.js")
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")
+  body.ui
+    section
+      h2 Layout
+      .row
+        .col.xs1 12
+      .row
+        .col.xs2 6
+        .col.xs2 6
+      .row
+        .col.xs1.sm3 4
+        .col.xs1.sm3 4
+        .col.xs1.sm3 4
+      .row
+        .col.xs2.sm4 3
+        .col.xs2.sm4 3
+        .col.xs2.sm4 3
+        .col.xs2.sm4 3
+      .row
+        .col.xs3.sm6 2
+        .col.xs3.sm6 2
+        .col.xs3.sm6 2
+        .col.xs3.sm6 2
+        .col.xs3.sm6 2
+        .col.xs3.sm6 2
+    section
+      h2 Accordion
+      .row
+        ul.expansion-panel
+          - for (var x = 1; x < 5; x++)
+            li
+              .ep-header.ripple
+                span= 'Title ' + x
+              .ep-body
+                p(lorem="2")
+    section
+      h2 Breadcrumbs
+      - var breadcrumbs = ['Home', 'Second page', 'Current page']
+      include ../modules/breadcrumbs/m_breadcrumbs.jade
+    section
+      h2 Buttons
+      .buttons
+        button(class="btn ripple")
+          span Normal
+        button(class="btn ripple" disabled)
+          span Disabled
+    section
+      h2 Tables
+      table
+        tr
+          th Заголовок 1
+          th Заголовок 2
+          th Заголовок 3
+        tr
+          td Значение 1
+          td Значение 2
+          td Значение 3
+        tr
+          td Значение 4
+          td Значение 5
+          td Значение 6
+    section
+      h2 Modals
+      a(class="btn btn-modal ripple" href="#modal-callback")
+        span Open modal
+      div(id="modal-callback" class="modal zoom-anim-dialog mfp-hide")
+        .modal-title
+          h1 Modal title
+        .modal-body
+          p(lorem="1")
+    section
+      h2 Pagination
+      include ../modules/pagination/m_pagination.jade
+    section
+      h2 Select
+      .select
+        select
+          option(selected disabled) Choose value...
+          option Value #1
+          option Value #2
+          option Value #3
+          option Value #4
+    section
+      h2 Checkboxes & radios
+      .btn-group
+        .checkboxes
+          label
+            input(type="checkbox" name="checkbox" value="1")
+            i.icon
+            i.label Checkbox #1
+        .checkboxes
+          label
+            input(type="checkbox" name="checkbox" value="1")
+            i.icon
+            i.label Checkbox #2
+      .btn-group
+        .radios
+          label
+            input(type="radio" name="radios" value="1")
+            i.icon
+            i.label Radios #1
+        .radios
+          label
+            input(type="radio" name="radios" value="2")
+            i.icon
+            i.label Radios #2
+    section
+      h2 Article (Typography)
+      article
+        h1 Headling 1
+        p Duis aute irure dolor in <a href="#">reprehenderit in voluptate</a> velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+        h2 Headling 2
+        blockquote(lorem="3")
+        h3 Headling 3
+        ul
+          li Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+          li Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          li Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+        h4 Headling 4
+        ol
+          li Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+          li Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          li Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.

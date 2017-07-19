@@ -1,0 +1,126 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title FAQ
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container
+    main
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") О нас
+          li: a(href="#") Центр помощи
+      .page-title
+        h2 Центр помощи
+      .m_faq-nav
+        h3 Популярные вопросы и ответы
+        .m_categories-nav
+          ul
+            li: a(class="btn btn-white" data-faq="1" href="#") Общие вопросы
+            li: a(class="btn btn-white" data-faq="2" href="#") Главное о топливных картах
+            li: a(class="btn btn-white" data-faq="3" href="#") Личный кабинет
+            li: a(class="btn btn-white" data-faq="4" href="#") Оплата
+            li: a(class="btn btn-white" data-faq="5" href="#") Вывод средств
+            li: a(class="btn btn-white" data-faq="6" href="#") Категория вопросов
+      .row
+        .col.xs1.sm2
+          ul.expansion-panel
+            li(data-faq="1")
+              .ep-header.ripple
+                span Как мне зарегистрироваться в системе?
+              .ep-body
+                p(lorem="5")
+                img(src="images/faq-example-img.png" alt="")
+            li(data-faq="2")
+              .ep-header.ripple
+                span Работаете ли вы с новыми водителями?
+              .ep-body
+                p(lorem="4")
+            li(data-faq="3")
+              .ep-header.ripple
+                span Где принимаются ваши топливные карты?
+              .ep-body
+                p(lorem="3")
+            li(data-faq="4")
+              .ep-header.ripple
+                span Что программируется на карте?
+              .ep-body
+                p(lorem="2")
+            li(data-faq="5")
+              .ep-header.ripple
+                span Какой срок службы у карт?
+              .ep-body
+                p(lorem="1")
+            li(data-faq="6")
+              .ep-header.ripple
+                span Что я должен сделать, чтобы получить пин-коды на топливные карты?
+              .ep-body
+                p(lorem="6")
+            li(data-faq="6")
+              .ep-header.ripple
+                span Как я могу активировать полученные карты?
+              .ep-body
+                p(lorem="3")
+            li(data-faq="1")
+              .ep-header.ripple
+                span Как я могу активировать полученные карты?
+              .ep-body
+                p(lorem="2")
+        .col.xs1.sm2
+          ul.expansion-panel
+            li(data-faq="1")
+              .ep-header.ripple
+                span Как мне зарегистрироваться в системе?
+              .ep-body
+                p(lorem="5")
+                img(src="images/faq-example-img.png" alt="")
+            li(data-faq="2")
+              .ep-header.ripple
+                span Работаете ли вы с новыми водителями?
+              .ep-body
+                p(lorem="4")
+            li(data-faq="3")
+              .ep-header.ripple
+                span Где принимаются ваши топливные карты?
+              .ep-body
+                p(lorem="3")
+            li(data-faq="4")
+              .ep-header.ripple
+                span Что программируется на карте?
+              .ep-body
+                p(lorem="2")
+            li(data-faq="5")
+              .ep-header.ripple
+                span Какой срок службы у карт?
+              .ep-body
+                p(lorem="1")
+            li(data-faq="2")
+              .ep-header.ripple
+                span Что я должен сделать, чтобы получить пин-коды на топливные карты?
+              .ep-body
+                p(lorem="6")
+            li(data-faq="6")
+              .ep-header.ripple
+                span Как я могу активировать полученные карты?
+              .ep-body
+                p(lorem="3")
+            li(data-faq="4")
+              .ep-header.ripple
+                span Как я могу активировать полученные карты?
+              .ep-body
+                p(lorem="2")
+      .m_tech-panel
+        .text
+          h3 Обратиться в техническую поддержку
+          ul
+            li
+              span Email техподдержки:
+              a(href="#") info@wo.taxi
+            li: a(href="#") Форум
+        .action
+          a(class="btn btn-orange" href="#") Задать вопрос
+

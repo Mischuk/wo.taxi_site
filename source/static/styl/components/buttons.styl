@@ -1,0 +1,110 @@
+.btn
+  sn()
+  anim()
+  position relative
+  display inline-block
+  vertical-align middle
+  background #e0e0e0
+  border-radius 2px
+  font-size 12px
+  font-weight 500
+  min-width 88px
+  padding 10px 15px
+  text-decoration none
+  will-change box-shadow
+  box-shadow 0 1px 1px rgba(0,0,0,.14), 0 1px 1px -2px rgba(0,0,0,.12)
+  color #424242
+  border none
+  border-radius $radius
+  text-align center
+  opensans()
+  font-weight 600
+  line-height 1
+  @media XS
+    font-size 14px
+    padding 10px 15px
+  &[disabled]
+    opacity .5
+    &:hover
+      &:after
+        background none
+  &.btn-orange
+    background $orange
+    color #fff
+    &:hover
+      background $blue
+    &:active
+      background $blue - 15%
+  &.btn-white
+    background #fff
+    color $blue
+    &:hover
+      background $orange
+      color #fff
+    &:active
+      background $orange - 10%
+
+
+// Ripples effect
+.ripple
+  anim()
+  position relative
+  overflow hidden
+  cursor pointer
+  .ink
+    display block
+    position absolute
+    background rgba(255, 255, 255, 0.3)
+    border-radius 100%
+    transform scale(0)
+  .animate
+    animation ripple 0.65s linear
+  @keyframes ripple
+    100%
+      opacity 0
+      transform scale(2.5)
+
+// Mobile burger button
+.btn-burger
+  anim()
+  position relative
+  display block
+  height 36px
+  width 36px
+  cursor pointer
+  border none
+  border-radius $radius
+  sn()
+  &:after,
+  &:before,
+  span
+    anim()
+    content ''
+    position absolute
+    left 50%
+    width 20px
+    margin-left -10px
+    height 2px
+    background #fff
+  &:before
+    top 9px
+  &:after
+    bottom 9px
+  span
+    top 50%
+    margin-top -1px
+  &:hover
+    background #fff
+    span,
+    &:after,
+    &:before
+      background $sky
+  &.is-open
+    span
+      opacity 0
+      transform translateX(-5px)
+    &:after
+      transform rotate(135deg) translate(-5px, 5px)
+    &:before
+      transform rotate(-135deg) translate(-5px, -5px)
+

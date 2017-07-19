@@ -1,0 +1,32 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Команда
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container
+    main
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") О нас
+          li: a(href="#") Наша команда
+      .m_categories-nav
+        ul
+          li: a(class="btn btn-white" href="#") Команда
+          li: a(class="btn btn-white" href="#") Центр помощи
+          li: a(class="btn btn-white" href="#") Контакты
+      .page-title
+        h2 Наша команда
+      .row
+        - each item in team
+          .col.xs1.sm2
+            .m_team-item
+              .image(style="background-image: url(images/team/#{item.img})"): a(href="#")
+              .details
+                .name: a(href="#") #{item.name}
+                .post Генеральный директор WO TAXI
+                .desc Андрей Владимирович не только умеет с филигранной точностью соединять самые мелкие детали и узлы. Он запросто заменит и слесаря, и сборщика, одинаково хорошо справляясь с любой работой. «Как соберешь, так и сваришь», —— любит повторять А. В. Борисов. Ему нравится возиться с деталями небольших размеров, выполняя чуть ли не ювелирную работу.

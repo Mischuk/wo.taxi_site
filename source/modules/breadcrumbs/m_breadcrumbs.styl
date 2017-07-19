@@ -1,0 +1,37 @@
+.m_breadcrumbs
+  position relative
+  text-align center
+  padding 15px 0
+  ul
+    cursor default
+    font-size 0
+    li
+      font-size 10px
+      text-transform uppercase
+      display inline-block
+      vertical-align middle
+      position relative
+      margin-right 30px
+      &:after
+        content ''
+        position absolute
+        right -17px
+        top 50%
+        width 5px
+        height 8px
+        background url("../images/breadcrumb-arrow.png") no-repeat 0 0
+        margin-top -4px
+      &:last-child
+        margin-right 0
+        &:after
+          display none
+      a
+        color #1d5d8b
+        &:hover
+          color $sky
+          text-decoration underline
+      &:last-child
+        a
+          color #999999
+          cursor default
+          text-decoration none

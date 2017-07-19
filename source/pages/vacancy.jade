@@ -1,0 +1,32 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Вакансии
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container.blue
+    main
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") О нас
+      .m_categories-nav
+        ul
+          li: a(class="btn" href="#") Команда
+          li: a(class="btn" href="#") Центр помощи
+          li: a(class="btn" href="#") Контакты
+      .page-title
+        h2 Вакансии
+      article
+        .row
+          - for (var x = 0; x < 5; x++)
+            .m_vacancy-item
+              .title: a(href="#") Помощник специалиста по охране труда
+              .price до 100 000 руб.
+              .desc
+                p Помощь в организации внешнего и внутреннего обучения сотрудников. Помощь в расследовании несчастных случаев. Помощь в проведение специальной оценки условий труда.
+                p Желателен опыт работы в сфере охраны труда.
+                p Обязательное знание программ: Paint, Word, Excel, желательно 1С. Внимательность, усидчивость, ответственность.

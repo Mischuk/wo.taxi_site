@@ -1,0 +1,64 @@
+.m_story
+  background #f2fafc
+  padding-top 15px
+  @media XS
+    padding-top 30px
+  @media SM
+    display table
+    table-layout fixed
+    padding-top 0
+  @media LG
+    position relative
+    display block
+  .text
+    @media SM
+      display table-cell
+      vertical-align top
+      width 50%
+      padding-top 50px
+      padding-bottom 50px
+    @media MD
+      padding-top 100px
+      padding-bottom 100px
+    @media LG
+      display block
+      width 100%
+      // padding-right 50%
+      max-width $wrapper
+      margin 0 auto
+      .wrapper
+        padding-right 52%
+    .section-title
+      text-align left
+    p
+      font-size 15px
+      line-height 24px
+      color #666666
+  .image
+    height 315px
+    background url("../images/story.jpg") no-repeat 50%
+    background-size cover
+    @media SM
+      display table-cell
+      vertical-align top
+      width 50%
+      height 100%
+    @media LG
+      position absolute
+      display block
+      right 0
+      top 0
+      width 50%
+  .details
+    margin-bottom 20px
+    @media XS
+      margin-bottom 30px
+    @media SM
+      margin-bottom 0
+    a
+      border 1px solid $blue
+      color $blue
+      background none
+      &:hover
+        background $blue
+        color #fff

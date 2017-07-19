@@ -1,0 +1,70 @@
+.m_news-item
+  anim()
+  background #fff
+  box-shadow 0 0 5px 1px rgba(66,72,74,0.2)
+  margin-bottom 15px
+  &:last-child
+    margin-bottom 0
+  @media XS
+    height 420px
+    position relative
+    overflow hidden
+  @media SM
+    margin-bottom 0
+  &:hover
+    @media LG
+      box-shadow 0 0 10px 2px rgba(66, 72, 74, .3)
+  .image
+    height 200px
+    @media XS
+      height 180px
+    a
+      position relative
+      display block
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position top center
+      background-size cover
+      &:after
+        anim()
+        content ''
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        background #000
+        opacity 0
+      &:hover
+        &:after
+          opacity .6
+  .news-body
+    color #666666
+    font-size 14px
+    line-height 24px
+    .title
+      a
+        anim()
+        display inline-block
+        vertical-align middle
+        color $blue
+        font-size 15px
+        line-height 24px
+        padding 10px 15px
+        &:hover
+          color $sky
+          text-decoration underline
+    .desc
+      padding 0 15px
+      margin-bottom 15px
+    .post-date
+      padding 10px 15px
+      border-top 1px solid #d9dfe3
+      @media XS
+        position absolute
+        left 0
+        bottom 0
+        width 100%
+        background #fff
+        z-index 1

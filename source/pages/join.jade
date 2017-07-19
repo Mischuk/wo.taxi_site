@@ -1,0 +1,32 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Подключение к такси
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Подключение к такси
+  .page-title
+    .wrapper
+      h2 Подключение к такси
+  .m_join
+    .block
+      a(href="#" style="background-image: url('images/join-1.jpg')")
+        .wrapper
+          .vertical-outer
+            .vertical-inner
+              span.title Подключение к такси<br>для новых водителей
+              span.desc Wialon OIL дает возможность значительно повысить управляемость транспортом Вашей организации, а также существенно сократить издержки на его содержание.
+    .block
+      a(href="#" style="background-image: url('images/join-2.jpg')")
+        .wrapper
+          .vertical-outer
+            .vertical-inner
+              span.title Подключение к такси<br>для действующих водителей
+              span.desc Wialon OIL дает возможность значительно повысить управляемость транспортом Вашей организации, а также существенно сократить издержки на его содержание.

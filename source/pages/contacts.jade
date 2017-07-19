@@ -1,0 +1,106 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Контакты
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Контакты
+  .page-title
+    .wrapper
+      h2 Контакты
+  .m_contacts
+    .toggle-map
+      a.btn(href="#") Показать только карту
+    .map
+      //- map
+      #map
+      //- balloons
+      .ballons
+        .local-map
+          script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+          .map-container
+            .info
+              .header
+                .label Ваш город:
+                .select-contrainer
+                  select(id="editable-select")
+                    option(value="1" selected="selected") Санкт-Петербург
+                    option(value="2") Москва
+                    option(value="3") Екатеринбург
+              .body
+                div(class="place current")
+                  .row
+                    .label Часы работы:
+                    .value Пн-сб: с 09:00 до 20:00. В воскресенье на Ваши вопросы отвечает дежурный менеджер.
+                  .row
+                    .label Адрес:
+                    .value Санкт-Петербург, ул. Аккуратова, д. 13
+                  .row
+                    .label Телефон:
+                    .value: b 8 (800) 333-66-12
+                  .row
+                    .label Email:
+                    .value: a(href="#") info@wo.taxi
+                  .socials
+                    .label Мы в соц. сетях:
+                    ul
+                      li: a(class="fb" href="#")
+                      li: a(class="vk" href="#")
+                      li: a(class="ok" href="#")
+                .place
+                  .row
+                    .label Часы работы:
+                    .value Пн-сб: с 09:00 до 20:00. В воскресенье на Ваши вопросы отвечает дежурный менеджер.
+                  .row
+                    .label Адрес:
+                    .value Москва, ул. Аккуратова, д. 13
+                  .row
+                    .label Телефон:
+                    .value: b 8 (800) 333-66-12
+                  .row
+                    .label Email:
+                    .value: a(href="#") info@wo.taxi
+                  .socials
+                    .label Мы в соц. сетях:
+                    ul
+                      li: a(class="fb" href="#")
+                      li: a(class="vk" href="#")
+                      li: a(class="ok" href="#")
+                .place
+                  .row
+                    .label Часы работы:
+                    .value Пн-сб: с 09:00 до 20:00. В воскресенье на Ваши вопросы отвечает дежурный менеджер.
+                  .row
+                    .label Адрес:
+                    .value Екатеринбург, ул. Аккуратова, д. 13
+                  .row
+                    .label Телефон:
+                    .value: b 8 (800) 333-66-12
+                  .row
+                    .label Email:
+                    .value: a(href="#") info@wo.taxi
+                  .socials
+                    .label Мы в соц. сетях:
+                    ul
+                      li: a(class="fb" href="#")
+                      li: a(class="vk" href="#")
+                      li: a(class="ok" href="#")
+        .tech-support
+          .top
+            .label Обратиться в техническую поддержку
+            .action
+              a(class="btn" href="#") Задать вопрос
+          .bottom
+            .email
+              .label Email техподдержки:
+              .value: a(href="#") info@wo.taxi
+            ul
+              li: a(href="#") Форум
+              li: a(href="#") Центр помощи

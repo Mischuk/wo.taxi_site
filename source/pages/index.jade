@@ -1,0 +1,137 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Главная
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_lead-services
+    .wrapper
+      .section-title
+        h2 Хотите зарабатывать в такси больше?
+        p Подключитесь в своем городе и увеличьте доход
+      .row
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-1.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Uber
+              .desc Станьте водителем Uber и зарабатывайте хорошие деньги в качестве независимого подрядчика. Получайте еженедельный гонорар лишь за то, что помогаете пользователям приложения передвигаться по городу. Будьте сами себе начальником и получайте оплату за работу, придерживаясь собственного графика.
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/1.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-2.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Gett
+              .desc Подключайтесь к международному сервису такси и получайте заказы без простоя и холостого пробега
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/2.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-3.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Яндекс Такси
+              .desc Подключайтесь к заказам Яндекс.Такси и работайте на себя
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/3.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-4.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Биржи такси
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+              .logo
+                .icon: a(href="#"): img(src="images/services/4.png" alt="")
+                .icon: a(href="#"): img(src="images/services/5.png" alt="")
+                .icon: a(href="#"): img(src="images/services/6.png" alt="")
+                .icon: a(href="#"): img(src="images/services/7.png" alt="")
+  .m_how-steps
+    .wrapper
+      .section-title
+        h2 Как это работает?
+      .circle
+        .round
+          .round-inner
+            .round-image: img(src="images/circle/logo.png" alt="")
+            .round-text <span class="strong">WO.TAXI</span> создает общий лицевой счет для всех сервисов такси
+        .list
+          .item
+            .icon(data-circle-message="Вывод денег ежедневно и еженедельно"): img(src="images/circle/5.png" alt="")
+            .label Вывод денег ежедневно <br>и еженедельно
+          .item
+            .icon(data-circle-message="Пополнение бирж такси, не выходя из автомобиля"): img(src="images/circle/4.png" alt="")
+            .label Пополнение бирж такси, <br>не выходя из автомобиля
+          .item
+            .icon(data-circle-message="Пополнение баланса WO.TAXI"): img(src="images/circle/3.png" alt="")
+            .label Пополнение баланса <br>WO.TAXI
+          .item
+            .icon(data-circle-message="Автомойка, шиномонтаж и товары на АЗС"): img(src="images/circle/6.png" alt="")
+            .label Автомойка <br>Шиномонтаж <br>Товары на АЗС
+          .item
+            .icon(data-circle-message="Помощь другу - Переводы внутри WO.TAXI"): img(src="images/circle/1.png" alt="")
+            .label Помощь другу <br>Переводы внутри WO.TAXI
+          .item
+            .icon(data-circle-message="Топливные карты: заработок сразу без комисии доступен для заправки"): img(src="images/circle/2.png" alt="")
+            .label Топливные карты: <br>заработок сразу без комисии доступен для заправки
+      .network
+        h3 Один или несколько сервисов такси, в которых вы работаете
+        .list
+          .item: a(href="#"): img(src="images/network/1.png" alt="")
+          .item: a(href="#"): img(src="images/network/2.png" alt="")
+          .item: a(href="#"): img(src="images/network/3.png" alt="")
+          .item: a(href="#"): img(src="images/network/4.png" alt="")
+          .item: a(href="#"): img(src="images/network/5.png" alt="")
+          .item: a(href="#"): img(src="images/network/6.png" alt="")
+          .item: a(href="#"): img(src="images/network/7.png" alt="")
+          .item
+            a(class="custom" href="#")
+              span Ваша биржа такси
+  .m_story
+    .text
+      .wrapper
+        .section-title
+          h3 О КОМПАНИИ
+        p(lorem="1")
+        p(lorem="3")
+        .details: a(class="btn" href="#") Подробнее
+    .image
+  .m_news
+    .wrapper
+      .section-title
+        h3 НОВОСТИ
+      .row
+        .col.xs2.sm4
+          .m_news-item
+            .image: a(href="#" style="background-image: url('images/news-item-1.jpg')")
+            .news-body
+              .title: a(href="#") Мировые цены на нефть продолжают расти
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное.
+              .post-date 9 февраля 2016
+        .col.xs2.sm4
+          .m_news-item
+            .image: a(href="#" style="background-image: url('images/news-item-2.jpg')")
+            .news-body
+              .title: a(href="#") Мировые цены на нефть продолжают расти
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное. Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное. Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное.
+              .post-date 9 февраля 2016
+        .col.xs2.sm4
+          .m_news-item
+            .image: a(href="#" style="background-image: url('images/news-item-3.jpg')")
+            .news-body
+              .title: a(href="#") Мировые цены на нефть продолжают расти продолжают расти продолжают расти
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное.
+              .post-date 9 февраля 2016
+        .col.xs2.sm4
+          .m_news-item
+            .image: a(href="#" style="background-image: url('images/news-item-4.jpg')")
+            .news-body
+              .title: a(href="#") Мировые цены на нефть продолжают расти
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное.
+              .post-date 9 февраля 2016
+

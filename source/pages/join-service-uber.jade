@@ -1,0 +1,84 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Выбор сервиса Uber
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Подключение к такси
+        li: a(href="#") Выбор сервиса
+        li: a(href="#") Uber
+  .page-title
+    .wrapper
+      h2 Uber
+  .m_service-intro(style="background-image: url('images/uber-bg.jpg')")
+    .wrapper
+      .vertical-outer
+        .vertical-inner
+          h3 Подключаем к uber без комиссии
+          p Берем организационные сложности на себя
+          .action
+            a(class="btn btn-orange" href="#") Стать водителем
+  .m_pluses.inverted
+    .wrapper
+      .list
+        - each item in join
+          .item
+            .icon: img(src="#{item.img}" alt="")
+            .desc #{item.desc}
+            .details: a(href="#") Подробнее
+      .action
+        a(class="btn btn-orange" href="#") Стать водителем
+  .m_service-details
+    .wrapper
+      .section-title
+        h3 ХОТИТЕ УЗНАТЬ ПОДРОБНЕЕ?
+      .row
+        .col.xs2.sm4
+          .item
+            .image: img(src="images/sd-1.png" alt="")
+            .title О сервисе
+            .desc Uber — международная компания из Сан-Франциско, создавшая одноименное мобильное приложение для поиска, вызова и оплаты такси или частных водителей. Uber функционирует в 542 городах мира, среди которых 17 российских.
+            .details: a(class="btn btn-white" href="#") Подробнее
+        .col.xs2.sm4
+          .item
+            .image: img(src="images/sd-2.png" alt="")
+            .title Требования
+            .desc Теперь вы готовы отправиться в путь. Находитесь ли вы за рулем собственного автомобиля или автомобиля с коммерческой лицензией, вы должны соответствовать минимальным требованиям и пройти проверку безопасности онлайн.
+            .details: a(class="btn btn-white" href="#") Подробнее
+        .col.xs2.sm4
+          .item
+            .image: img(src="images/sd-3.png" alt="")
+            .title Порядок действий при подключении
+            .desc Теперь вы готовы отправиться в путь. Находитесь ли вы за рулем собственного автомобиля или автомобиля с коммерческой лицензией, вы должны соответствовать минимальным требованиям и пройти проверку безопасности онлайн.
+            .details: a(class="btn btn-white" href="#") Подробнее
+        .col.xs2.sm4
+          .item
+            .image: img(src="images/sd-4.png" alt="")
+            .title Документы
+            .desc Uber — международная компания из Сан-Франциско, создавшая одноименное мобильное приложение для поиска, вызова и оплаты такси или частных водителей. Uber функционирует в 542 городах мира, среди которых 17 российских.
+            .details: a(class="btn btn-white" href="#") Подробнее
+  .m_start-steps
+    .wrapper
+      .section-title
+        h3 Начать очень просто
+      .list
+        .item
+          .number 1
+          .title: a(href="#") Зарегистрируйтесь
+          .desc Процесс занимает считанные минуты
+        .item
+          .number 2
+          .title: a(href="#") Подпишите договор
+          .desc Подпишите несколько документов у нас в офисе и получите топливную карту
+        .item
+          .number 3
+          .title: a(href="#") Пополните баланс
+          .desc Пополните баланс в личном кабинете и начинайте работу без комиссий
+

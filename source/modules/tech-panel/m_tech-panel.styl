@@ -1,0 +1,55 @@
+.m_tech-panel
+  background #fff
+  box-shadow 0 0 5px 1px rgba(66,72,74,0.2)
+  margin-top 15px
+  padding 15px
+  position relative
+  @media MD
+    padding 40px 60px
+    margin-top 40px
+  h3
+    font-weight normal
+    display block
+    margin-bottom 10px
+    @media MD
+      font-size 32px
+    @media LG
+      font-size 36px
+  ul
+    clearfix()
+    margin-bottom 10px
+    @media XS
+      padding 10px 0
+    @media SM
+      max-width 430px
+      margin-bottom 0
+    li
+      font-size 18px
+      & + li
+        margin-top 5px
+        @media XS
+          margin-top 0
+      &:first-child
+        @media XS
+          float left
+      &:last-child
+        @media XS
+          float right
+      span
+        color #666
+      a
+        color $blue
+        &:hover
+          color $sky
+          text-decoration underline
+  .action
+    @media SM
+      position absolute
+      right 15px
+      top 15px
+    @media MD
+      right 60px
+      top 40px
+    a
+      font-size 16px
+      padding 18px 30px

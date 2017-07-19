@@ -1,0 +1,33 @@
+.m_vacancy-panel
+  background #f2fafc
+  border 1px solid #edf3f4
+  margin-bottom 15px
+  padding 15px
+  @media SM
+    padding 30px
+  @media MD
+    padding 35px 45px
+    margin-bottom 30px
+  .column
+    margin-bottom 15px
+    &:first-child,
+    &:nth-child(2)
+      @media XS
+        float left
+        width 50%
+    &:last-child
+      margin-bottom 0
+      @media XS
+        float left
+        width 100%
+    @media SM
+      width 33.333% !important
+  .label
+    color #666
+    font-size 12px
+    @media SM
+      margin-bottom 5px
+  .value
+    font-size 18px
+    line-height 1
+    font-weight bold

@@ -1,0 +1,407 @@
+.m_header
+  height 142px
+  position: relative;
+  z-index: 100;
+  &.fixed
+    .bottom
+      position fixed
+      left 0
+      top 0
+      width 100%
+      z-index 100
+  .wrapper
+    padding 0 10px
+    @media XS
+      padding 0 15px
+  .top
+    height 42px
+    background #fff
+  .bottom
+    height 100px
+    background $sky
+    box-shadow 0 1px 4px rgba(0,0,0,.15)
+  .menu
+    display none
+    @media SM
+      display block
+      float left
+    ul
+      line-height 42px
+      font-size 0
+      li
+        display inline-block
+        vertical-align middle
+        border-left 1px solid #d9dfe3
+        line-height 1.2
+        &:last-child
+          border-right 1px solid #d9dfe3
+        a
+          font-size 13px
+          color $blue
+          display inline-block
+          vertical-align middle
+          padding 5px 10px
+          @media LG
+            padding 5px 15px
+          &:hover
+            span
+              color $sky
+              text-decoration underline
+  .user-locate
+    display none
+    @media MD
+      display block
+      float left
+      line-height 40px
+      padding-left 15px
+      position relative
+    @media LG
+      padding-left 20px
+    .locate-check
+      position absolute
+      right 0
+      top 100%
+      background #fff
+      z-index 10
+      box-shadow 0 3px 20px 4px rgba(0,0,0,.15)
+      width 325px
+      margin-top 10px
+      &:after
+        content ''
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 15px 15px 15px;
+        border-color: transparent transparent #ffffff transparent;
+        position absolute
+        right 30px
+        top -15px
+      .form-row
+        padding 20px
+        &:last-child
+          border-top 1px solid #ebebeb
+          background #f2fafc
+        .value, .label
+          line-height 1
+          font-size 14px
+        .label
+          color #666
+          margin-bottom 5px
+        .value
+          color $blue
+        a
+          font-size 14px
+          color $blue
+          margin-left 20px
+          display inline-block
+          vertical-align middle
+          &:hover
+            color $sky
+        button
+          background $blue
+          display inline-block
+          vertical-align middle
+          border none
+          sn()
+          anim()
+          position relative
+          display inline-block
+          vertical-align middle
+          border-radius 2px
+          font-size 12px
+          font-weight 500
+          min-width 88px
+          padding 10px 15px
+          text-decoration none
+          will-change box-shadow
+          box-shadow 0 1px 1px rgba(0,0,0,.14), 0 1px 1px -2px rgba(0,0,0,.12)
+          color #fff
+          border none
+          border-radius $radius
+          text-align center
+          opensans()
+          font-weight 600
+          line-height 1
+          @media XS
+            font-size 14px
+            padding 10px 15px
+          &:hover
+            background $orange
+          &:active
+            background $orange - 10%
+    .locate-result
+      line-height 1
+      display inline-block
+      vertical-align middle
+      font-size 13px
+      .label
+        color #666666
+        display inline-block
+        vertical-align middle
+        @media LG
+          position relative
+          padding-left 15px
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat 0 0;
+            width: 12px;
+            height: 16px;
+            position absolute
+            left 0
+            top 50%
+            margin-top -8px
+      .value
+        a
+          color $blue
+          font-size 13px
+          display inline-block
+          vertical-align middle
+          span
+            border-bottom 1px dashed $blue
+            display inline-block
+            vertical-align middle
+            max-width 120px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+          &:hover
+            span
+              color $sky
+              border-color $sky
+
+  .help
+    display none
+    @media MD
+      float right
+      display block
+      line-height 40px
+    a
+      font-size 13px
+      color $blue
+      span
+        border-left 1px solid #d9dfe3
+        border-right 1px solid #d9dfe3
+        padding 3.5px 10px
+        @media LG
+          padding 3.5px 15px
+      &:hover
+        span
+          color $sky
+          text-decoration underline
+  .bottom-menu
+    display none
+    @media MD
+      display block
+      float left
+      padding-left 220px
+      padding-right 270px
+      width 100%
+      @media LG
+        padding-right 320px
+    ul
+      display table
+      line-height 100px
+      text-align center
+      width 100%
+      li
+        display table-cell
+        vertical-align middle
+      a
+        exo()
+        color #fff
+        font-size 16px
+        line-height 1
+        display inline-block
+        padding 0 10px
+        @media LG
+          font-size 20px
+        &:hover
+          text-decoration underline
+  .search
+    clearfix()
+    display none
+    @media LG
+      float left
+      display block
+      margin-right 20px
+    .search-toggle
+      sn()
+      background url('../images/sprite.png') no-repeat 7px -43px;
+      width: 34px;
+      height: 34px;
+      border none
+    form
+      position absolute
+      right 100%
+      top 50%
+      width 680px
+      height 34px
+      margin-top -(@height/2)
+      margin-right -34px
+      display none
+      input
+        trs(box-shadow)
+        width 100%
+        height 100%
+        box-shadow: 0 1px 1px rgba(0,0,0,0.14), 0 1px 1px -2px rgba(0,0,0,0.12);
+        background #fff
+        border none
+        opensans()
+        border-radius $radius
+        padding 0 35px 0 10px
+        &:focus
+          box-shadow: 0 2px 5px rgba(0,0,0,0.14), 0 2px 2px -3px rgba(0,0,0,0.12);
+      button[type=submit]
+        sn()
+        background url('../images/sprite.png') no-repeat -43px -43px;
+        width: 34px;
+        height: 34px;
+        border none
+        position absolute
+        right 0
+        top 0
+        z-index 10
+  .socials
+    height 100%
+    position absolute
+    right 0
+    top 0
+    padding-right 5px
+    line-height 42px
+    font-size 0
+    @media XS
+      padding-right 13px
+    @media MD
+      display none
+    @media LG
+      display block
+      padding 0 15px
+      border-right 1px solid #d9dfe3
+      top 50%
+      height 24px
+      line-height 24px
+      position static
+      float right
+      margin 9px 0
+    a
+      anim()
+      display inline-block
+      vertical-align middle
+      width 20px
+      height 20px
+      margin 0 1px
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+      @media XS
+        margin 0 2px
+      &.ok
+        background-position -50px 0
+      &.fb
+        background-position -150px 0
+      &.vk
+        background-position -100px 0
+      &:hover
+        opacity .8
+  .contacts
+    line-height 42px
+    @media SM
+      float left
+      padding-left 10px
+      margin-top -2px
+    @media LG
+      padding-left 20px
+    > div
+      display inline-block
+      vertical-align middle
+      line-height 1
+      @media SM
+        padding 5px 10px
+    .tel
+      font-weight bold
+      font-size 13px
+      @media XS
+        font-size 14px
+      @media SM
+        padding-right 5px
+      a
+        color #000
+    .callback
+      margin-left 5px
+      @media SM
+        border-right 1px solid #d9dfe3
+        margin-left 0
+        padding-left 0
+        padding-right 20px
+      @media LG
+        padding-right 30px
+      a
+        display inline-block
+        vertical-align top
+        font-size 13px
+        span
+          color $blue
+          display inline-block
+          vertical-align middle
+          border-bottom 1px dashed $blue
+          &:hover
+            color $sky
+            border-color $sky
+  .logo
+    position absolute
+    left 60px
+    top 50%
+    width 134px
+    height 55px
+    margin-top -(@height/2)
+    background url("../images/logo.png") no-repeat 0 0
+    background-size contain
+    @media XS
+      height 70px
+      margin-top -35px
+    @media SM
+      left 80px
+    a
+      display block
+      width 100%
+      height 100%
+  .right
+    text-align right
+    padding-left 165px
+    padding-top 12.5px
+    @media XS
+      padding 33px 0
+    @media MD
+      position absolute
+      right 15px
+      top 0
+      height 100%
+    .actions
+      @media LG
+        float left
+      > div
+        @media XS
+          display inline-block
+          vertical-align middle
+      a
+        width 100%
+        max-width 150px
+        @media XS
+          width auto
+          max-width none
+      .signup
+        margin-bottom 10px
+        @media XS
+          margin-bottom 0
+          margin-right 10px
+  .main-menu
+    width 36px
+    height 36px
+    position absolute
+    left 15px
+    top 50%
+    margin-top -18px
+    a
+      border 1px solid #fff
+      border-radius $radius
+      display inline-block
+      vertical-align middle

@@ -1,0 +1,113 @@
+.m_advantages
+  .video
+    position relative
+    padding 15px
+    @media MD
+      padding 30px 0
+      margin-bottom 30px
+    .image
+      display none
+      width 970px
+      height 557px
+      margin 0 auto
+      @media MD
+        display block
+      img
+        display block
+        width 100%
+        height 100%
+    #videox
+      position relative
+      padding-bottom 56.25%
+      padding-top 0
+      height 0
+      width 100%
+      @media MD
+        width 709px
+        position absolute
+        left 50%
+        top 72px
+        height 443px
+        margin-left -354px
+        z-index 1
+        padding-bottom 0
+      iframe
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+
+
+  .network
+    background #fff
+    border-radius $radius
+    padding 15px
+    color #000
+    margin-bottom 0px
+    box-shadow 0 0 8px rgba(0,0,0,.2)
+    @media LG
+      padding 60px 0
+    h3
+      font-size 20px
+      line-height 1.2
+      text-align center
+      margin-bottom 15px
+      @media MD
+        font-size 36px
+    p
+      exo()
+      font-size 18px
+      text-align center
+      @media MD
+        font-size 24px
+    .list
+      clearfix()
+      .item
+        float left
+        height 70px
+        line-height 70px
+        width 31.3%
+        margin-left 3%
+        margin-bottom 3%
+        @media XS
+          width 22.66%
+        @media MD
+          width 10.2%
+          margin-left 1%
+          margin-bottom 0
+          &:first-child
+            margin-left 0
+        @media screen and (max-width: 479px)
+          &:nth-child(3n+1)
+            clear left
+            margin-left 0
+        @media screen and (max-width: 991px) and (min-width: 480px)
+          &:nth-child(4n+1)
+            clear left
+            margin-left 0
+
+        a
+          display block
+          width 100%
+          height 100%
+          border 1px solid #d9dfe3
+          border-radius $radius
+          text-align center
+          &.custom
+            line-height 1
+            display table
+            exo()
+            font-weight bold
+            color $orange
+            text-transform uppercase
+            font-size 12px
+            border-color $orange
+            span
+              display table-cell
+              vertical-align middle
+          img
+            display inline-block
+            vertical-align middle
+            max-height 90%
+            max-width 90%

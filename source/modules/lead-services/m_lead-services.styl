@@ -1,0 +1,90 @@
+.m_lead-services
+  position relative
+  padding 15px 0
+  @media LG
+    padding-top 30px
+  .section-title
+    p
+      color $blue
+  .col
+    margin-top 0
+    margin-bottom 15px
+    @media LG
+      margin-bottom 30px
+    &:last-child
+      margin-bottom 0
+  .item
+    box-shadow 0 0 5px 1px rgba(66, 72, 74, .2)
+    @media XS
+      clearfix()
+      height 440px
+    @media SM
+      overflow hidden
+    @media LG
+      anim()
+    &:hover
+      @media LG
+        box-shadow 0 0 10px 2px rgba(66, 72, 74, .3)
+    .image
+      height 300px
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      @media XS
+        float left
+        width 45%
+        height 100%
+      a
+        position relative
+        display block
+        size(100%)
+        &:after
+          anim()
+          content ''
+          position absolute
+          left 0
+          top 0
+          width 100%
+          height 100%
+          background rgba(0,0,0, .1)
+        &:hover
+          &:after
+            background rgba(0,0,0,.6)
+    .details
+      padding 15px
+      @media XS
+        float left
+        width 55%
+        height 100%
+      @media LG
+        padding 40px 30px
+      .title
+        margin-bottom 10px
+        @media LG
+          margin-bottom 20px
+        a
+          color $blue
+          exo()
+          anim()
+          font-weight bold
+          font-size 30px
+          line-height 1
+          border-bottom 1px solid transparent
+          &:hover
+            color $sky
+            border-bottom 1px solid $sky
+      .desc
+        font-size 14px
+        line-height 24px
+        color #666666
+        margin-bottom 15px
+        @media SM
+          max-height 75%
+          overflow hidden
+      .logo
+        .icon
+          margin-top 10px
+          width 49%
+          display inline-block
+          vertical-align middle
+          text-align left

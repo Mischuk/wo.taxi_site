@@ -1,0 +1,96 @@
+.m_pluses
+  padding 30px 0
+  color #fff
+  background url("../images/plus/bg.jpg") no-repeat 50%
+  background-size cover
+  @media LG
+    padding 60px 0
+  .list
+    text-align center
+    @media SM
+      margin-top 30px
+    .item
+      width 49%
+      display inline-block
+      vertical-align top
+      @media SM
+        width 32%
+      .icon
+        height 130px
+        line-height 130px
+        margin-bottom 15px
+        img
+          display inline-block
+          vertical-align bottom
+          max-height 100%
+          max-width 100%
+      .desc
+        font-size 14px
+        line-height 20px
+        @media XS
+          font-size 16px
+          line-height 24px
+          padding 0 10px
+        @media MD
+          font-size 18px
+          line-height 30px
+      .details
+        margin-top 10px
+        a
+          anim()
+          color #fff
+          position relative
+          border-bottom 1px solid rgba(255,255,255,.5)
+          display inline-block
+          vertical-align middle
+          font-size 14px
+          line-height 20px
+          @media XS
+            font-size 16px
+            line-height 24px
+          @media MD
+            font-size 18px
+            line-height 30px
+          &:hover
+            border-color #fff
+          &:after
+            content ''
+            width 12px
+            height 7px
+            position absolute
+            right -20px
+            top 50%
+            margin-top -3.5px
+            background url("../images/details-arrow.png") no-repeat 0 0
+  &.inverted
+    background #fff
+    padding-top 0
+    .action
+      margin-top 30px
+      text-align center
+      a
+        font-size 18px
+        padding 18px 25px
+    .list
+      .item
+        .icon
+          height 100px
+          line-height 100px
+        .desc
+          color #000
+          padding-left 5px
+          padding-right 5px
+          @media MD
+            padding-left 40px
+            padding-right 40px
+          @media LG
+            padding-left 50px
+            padding-right 50px
+        .details
+          a
+            color $sky
+            text-decoration underline
+            &:after
+              background-image url("../images/details-arrow-sky.png")
+            &:hover
+              text-decoration none

@@ -1,0 +1,112 @@
+div(id="modal-callback" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    .logo: img(src="images/logo-large.png" alt="")
+    h1 Слишком низкая комиссия?
+    h2 Хотите узнать, в чем фишка?!
+  .modal-body
+    form
+      .row
+        .form-col
+          label
+            input(type="text" placeholder="Как Вас зовут?" required)
+            .icon.username
+        .form-col
+          label
+            input(class="mask-tel" type="tel" placeholder="Ваш телефон" required)
+            .icon.usertel
+        .terms
+          .checkboxes
+            label
+              input(type="checkbox" name="terms")
+              .icon
+              .label Я даю согласение на <a target="_blank" href="#">обработку персональных данных</a> и принимаю условия <a target="_blank" href="#">договора</a>
+
+        .form-col
+          button(class="btn" type="submit") Отправить заявку
+a(class="btn-modal" id="modal-manager-call" href="#modal-manager")
+div(id="modal-manager" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h1 Ваша заявка принята к регистации
+    p Наш менеджер свяжеться с Вами для заполения документов
+    ul
+      li: a(href="#") Центр помощи
+      li: a(href="#") Форум
+  .modal-footer
+    p Чтобы следить за новосями подпишитесь на нас в соц сетях:
+    ul
+      li: a(class="fb" href="#")
+      li: a(class="vk" href="#")
+      li: a(class="ok" href="#")
+a(class="btn-modal" id="modal-ty-call" href="#modal-ty")
+div(id="modal-ty" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h1 Спасибо за обращение! <br>Наш менеджер свяжеться с Вами для заполения документов
+  .modal-footer
+    p Чтобы следить за новосями подпишитесь на нас в соц сетях:
+    ul
+      li: a(class="fb" href="#")
+      li: a(class="vk" href="#")
+      li: a(class="ok" href="#")
+div(id="modal-locate" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h1 Укажите ваш город
+  .modal-body
+    form
+      .row
+        .form-col
+          label
+            input(type="text" id="set-locate" placeholder="Ваш город" value="Санкт-Петербург")
+            .icon.userlocate
+        .remark От вашего выбора зависят услуги оказываемые компании
+  .modal-bottom
+    .cities
+      .title Города
+      ul
+        li: a(href="#") Москва
+        li: a(href="#") Казань
+        li: a(href="#") Новосибирск
+        li: a(href="#") Тюмень
+        li: a(href="#") Санкт-Петербург
+        li: a(href="#") Краснодар
+        li: a(href="#") Пермь
+        li: a(href="#") Уфа
+        li: a(href="#") Воронеж
+        li: a(href="#") Красноярск
+        li: a(href="#") Ростов-на-Дону
+        li: a(href="#") Челябинск
+        li: a(href="#") Екатеринбург
+        li: a(href="#") Нижний Новгород
+        li: a(href="#") Самара
+        li.etc
+          a(href="#") Еще 74 городов
+          ul.hidden
+            li: a(href="#") Москва
+            li: a(href="#") Казань
+            li: a(href="#") Новосибирск
+            li: a(href="#") Тюмень
+            li: a(href="#") Санкт-Петербург
+            li: a(href="#") Краснодар
+            li: a(href="#") Пермь
+            li: a(href="#") Уфа
+            li: a(href="#") Воронеж
+            li: a(href="#") Красноярск
+            li: a(href="#") Ростов-на-Дону
+            li: a(href="#") Челябинск
+            li: a(href="#") Екатеринбург
+            li: a(href="#") Нижний Новгород
+            li: a(href="#") Самара
+            li: a(href="#") Москва
+            li: a(href="#") Казань
+            li: a(href="#") Новосибирск
+            li: a(href="#") Тюмень
+            li: a(href="#") Санкт-Петербург
+            li: a(href="#") Краснодар
+            li: a(href="#") Пермь
+            li: a(href="#") Уфа
+            li: a(href="#") Воронеж
+            li: a(href="#") Красноярск
+            li: a(href="#") Ростов-на-Дону
+            li: a(href="#") Челябинск
+            li: a(href="#") Екатеринбург
+            li: a(href="#") Нижний Новгород
+            li: a(href="#") Самара

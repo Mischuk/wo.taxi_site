@@ -1,0 +1,140 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Подключиться к Uber
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Подключение к такси
+          li: a(href="#") Выбор сервиса
+          li: a(href="#") UBER
+    .page-title
+      .wrapper
+        h2 Подключиться к Uber
+    .m_signup
+      .wrapper
+        .articles-panel
+          .title Информация:
+          ul
+            li: a(href="#") О Uber
+            li: a(href="#") Требования для подключения
+            li: a(href="#") Порядок действий для подключения
+            li: a(href="#") Необходимые документы
+
+        form(class="signup-form" id="singup-form")
+          .step-2.is-active
+            .title-form Загрузите ваши документы
+            .sub-step.is-open
+              .upload-item
+                .step-title.small
+                  | 1. Паспорт (первый разворот и прописка)
+                  .help-tooltip-button
+                  .help-tooltip-body
+                    p Wialon OIL объединяет в себе все преимущества использования системы мониторинга транспорта и топливных карт, а также предлагает Клиентам уникальные возможности контроля над махинациями с топливом и своевременного оповещения о нелегальных действиях водителей.
+                    img(src="images/cards-guide-1.png" alt="")
+                    p Wialon OIL объединяет в себе все преимущества использования системы мониторинга транспорта и топливных карт, а также предлагает Клиентам уникальные возможности контроля над махинациями с топливом и своевременного оповещения о нелегальных действиях водителей.
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="2")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 2. Водительсвое удостоверение
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="1")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 3. СТС
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="1")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 4. ОСАГО
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="1")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 5. Фото водителя, 4 фото авто, фото кресла
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="6")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 6. Договор
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="1")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+            .sub-step
+              .upload-item
+                .step-title.small 7. Реквизиты
+                div(class="dropzone" class="fade well")
+                  .icon
+                  .text
+                    p Выберите файлы со сканом/фото
+                    p.small или перетащите их в эту область
+                  span(class="fileinput-button")
+                    input(class="fileupload" type="file" name="files[]" multiple data-min-files="1")
+                    .min-files-balloon
+                div(class="progress")
+                  div(class="progress-bar progress-bar-success")
+                div(class="files")
+              .step-final
+                button(type="submit" class="btn btn-orange") Зарегистрироваться
+        .backward: a(href="#") Вернуться на предудыщий шаг

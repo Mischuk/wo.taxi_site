@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<title>UI modules</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="msapplication-tap-highlight" content="no">
+		<link type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+		<!-- Styles-->
+		<link href="css/plugins.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		<!-- JS-->
+		<script src="js/modernizr.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+
+	<body class="ui">
+		<section>
+			<h2>Layout</h2>
+			<div class="row">
+				<div class="col xs1">12</div>
+			</div>
+			<div class="row">
+				<div class="col xs2">6</div>
+				<div class="col xs2">6</div>
+			</div>
+			<div class="row">
+				<div class="col xs1 sm3">4</div>
+				<div class="col xs1 sm3">4</div>
+				<div class="col xs1 sm3">4</div>
+			</div>
+			<div class="row">
+				<div class="col xs2 sm4">3</div>
+				<div class="col xs2 sm4">3</div>
+				<div class="col xs2 sm4">3</div>
+				<div class="col xs2 sm4">3</div>
+			</div>
+			<div class="row">
+				<div class="col xs3 sm6">2</div>
+				<div class="col xs3 sm6">2</div>
+				<div class="col xs3 sm6">2</div>
+				<div class="col xs3 sm6">2</div>
+				<div class="col xs3 sm6">2</div>
+				<div class="col xs3 sm6">2</div>
+			</div>
+		</section>
+		<section>
+			<h2>Accordion</h2>
+			<div class="row">
+				<ul class="expansion-panel">
+					<li>
+						<div class="ep-header ripple">
+							<span>Title 1</span>
+						</div>
+						<div class="ep-body">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure
+								dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</li>
+					<li>
+						<div class="ep-header ripple">
+							<span>Title 2</span>
+						</div>
+						<div class="ep-body">
+							<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras
+								consequat.</p>
+						</div>
+					</li>
+					<li>
+						<div class="ep-header ripple">
+							<span>Title 3</span>
+						</div>
+						<div class="ep-body">
+							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.Phasellus ultrices nulla quis nibh. Quisque
+								a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+						</div>
+					</li>
+					<li>
+						<div class="ep-header ripple">
+							<span>Title 4</span>
+						</div>
+						<div class="ep-body">
+							<p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo
+								ullamcorper magna.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>Breadcrumbs</h2>
+			<div class="m_breadcrumbs">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Second page</a>
+					</li>
+					<li>
+						<a href="#">Current page</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>Buttons</h2>
+			<div class="buttons">
+				<button class="btn ripple">
+					<span>Normal</span>
+				</button>
+				<button class="btn ripple" disabled>
+					<span>Disabled</span>
+				</button>
+			</div>
+		</section>
+		<section>
+			<h2>Tables</h2>
+			<table>
+				<tr>
+					<th>Заголовок 1</th>
+					<th>Заголовок 2</th>
+					<th>Заголовок 3</th>
+				</tr>
+				<tr>
+					<td>Значение 1</td>
+					<td>Значение 2</td>
+					<td>Значение 3</td>
+				</tr>
+				<tr>
+					<td>Значение 4</td>
+					<td>Значение 5</td>
+					<td>Значение 6</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h2>Modals</h2>
+			<a class="btn btn-modal ripple" href="#modal-callback">
+				<span>Open modal</span>
+			</a>
+			<div class="modal zoom-anim-dialog mfp-hide" id="modal-callback">
+				<div class="modal-title">
+					<h1>Modal title</h1>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Pagination</h2>
+			<div class="m_pagination">
+				<ul>
+					<li>
+						<a class="btn ripple" href="#">
+							<</a>
+					</li>
+					<li>
+						<a class="btn ripple" href="#">1</a>
+					</li>
+					<li>
+						<a class="btn ripple" href="#">2</a>
+					</li>
+					<li>
+						<a class="btn ripple" href="#">...</a>
+					</li>
+					<li>
+						<a class="btn ripple" href="#">10</a>
+					</li>
+					<li>
+						<a class="btn ripple" href="#">></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>Select</h2>
+			<div class="select">
+				<select>
+					<option selected disabled>Choose value...</option>
+					<option>Value #1</option>
+					<option>Value #2</option>
+					<option>Value #3</option>
+					<option>Value #4</option>
+				</select>
+			</div>
+		</section>
+		<section>
+			<h2>Checkboxes & radios</h2>
+			<div class="btn-group">
+				<div class="checkboxes">
+					<label>
+						<input name="checkbox" type="checkbox" value="1">
+						<i class="icon"></i>
+						<i class="label">Checkbox #1</i>
+					</label>
+				</div>
+				<div class="checkboxes">
+					<label>
+						<input name="checkbox" type="checkbox" value="1">
+						<i class="icon"></i>
+						<i class="label">Checkbox #2</i>
+					</label>
+				</div>
+			</div>
+			<div class="btn-group">
+				<div class="radios">
+					<label>
+						<input name="radios" type="radio" value="1">
+						<i class="icon"></i>
+						<i class="label">Radios #1</i>
+					</label>
+				</div>
+				<div class="radios">
+					<label>
+						<input name="radios" type="radio" value="2">
+						<i class="icon"></i>
+						<i class="label">Radios #2</i>
+					</label>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Article (Typography)</h2>
+			<article>
+				<h1>Headling 1</h1>
+				<p>Duis aute irure dolor in
+					<a href="#">reprehenderit in voluptate</a> velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Donec nec justo eget felis facilisis fermentum. Aliquam
+					porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+				<h2>Headling 2</h2>
+				<blockquote>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+					<p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+				</blockquote>
+				<h3>Headling 3</h3>
+				<ul>
+					<li>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</li>
+					<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+					<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+				</ul>
+				<h4>Headling 4</h4>
+				<ol>
+					<li>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</li>
+					<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+					<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+				</ol>
+			</article>
+		</section>
+	</body>
+
+</html>

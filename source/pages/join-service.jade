@@ -1,0 +1,59 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Выбор сервиса
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Подключение к такси
+        li: a(href="#") Выбор сервиса
+  .page-title
+    .wrapper
+      h2 Выберете сервис для подключения
+  .m_lead-services
+    .wrapper
+      .row
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-1.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Uber
+              .desc Станьте водителем Uber и зарабатывайте хорошие деньги в качестве независимого подрядчика. Получайте еженедельный гонорар лишь за то, что помогаете пользователям приложения передвигаться по городу. Будьте сами себе начальником и получайте оплату за работу, придерживаясь собственного графика.
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/1.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-2.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Gett
+              .desc Подключайтесь к международному сервису такси и получайте заказы без простоя и холостого пробега
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/2.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-3.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Яндекс Такси
+              .desc Подключайтесь к заказам Яндекс.Такси и работайте на себя
+              .logo
+                .icon
+                  a(href="#"): img(src="images/services/3.png" alt="")
+        .col.xs1.sm2
+          .item
+            .image(style="background-image: url('images/serv-4.jpg') "): a(href="#")
+            .details
+              .title: a(href="#") Биржи такси
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+              .logo
+                .icon: a(href="#"): img(src="images/services/4.png" alt="")
+                .icon: a(href="#"): img(src="images/services/5.png" alt="")
+                .icon: a(href="#"): img(src="images/services/6.png" alt="")
+                .icon: a(href="#"): img(src="images/services/7.png" alt="")

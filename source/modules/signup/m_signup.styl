@@ -1,0 +1,353 @@
+.m_signup
+  position relative
+  .wrapper
+    max-width 1060px
+  .articles-panel
+    background #fff
+    box-shadow 1px 0 5px rgba(66, 72, 74, .2)
+    padding 15px
+    margin-bottom 15px
+    border-radius $radius
+    @media SM
+      float right
+      width 28%
+      padding 25px
+    @media MD
+      width 35%
+      max-width 370px
+    @media LG
+      padding 30px 30px
+    .title
+      exo()
+      font-size 24px
+      line-height 1
+      font-weight bold
+      margin-bottom 5px
+    ul
+      li
+        a
+          anim()
+          color $blue
+          display inline-block
+          vertical-align middle
+          padding 5px 0
+          font-size 14px
+          &:hover
+            color $sky
+            text-decoration underline
+  .signup-form
+    background #fff
+    box-shadow 1px 0 5px rgba(66, 72, 74, .2)
+    padding 15px
+    margin-bottom 15px
+    border-radius $radius
+    @media SM
+      float left
+      width 70%
+      max-width 555px
+      padding 25px
+    @media LG
+      padding 30px
+    & + .backward
+      @media SM
+        float left
+        width 100%
+    .title-form
+      exo()
+      font-size 24px
+      font-weight bold
+    .step-1,
+    .step-2
+      display none
+      &.is-active
+        display block
+    .sub-step
+      padding-top 30px
+      display none
+      &:first-child
+        padding-top 0
+      &.is-open
+        display block
+    .step-title
+      exo()
+      position relative
+      font-size 24px
+      line-height 1
+      font-weight bold
+      margin-bottom 15px
+      &.small
+        font-size 16px
+      .help-tooltip-body
+        display none
+        position absolute
+        right 0
+        top 100%
+        background #fff
+        box-shadow 0 0 20px rgba(0,0,0,.25)
+        padding 15px
+        z-index 10
+        max-width 470px
+        font-size 14px
+        font-family 'Open Sans'
+        font-weight normal
+        margin-top 10px
+        &:after
+          content ''
+          position absolute
+          left 0
+          top -30px
+          width 100%
+          height 30px
+          background-color transparent
+
+        &:hover
+          display block
+
+        img
+          max-width 100%
+          margin-bottom 15px
+        p:last-child
+          margin-bottom 0
+      .help-tooltip-button
+        background $sky
+        position relative
+        color #fff
+        display inline-block
+        vertical-align middle
+        width 15px
+        height 15px
+        line-height 15px
+        text-align center
+        font-size 12px
+        border-radius 50%
+        font-family 'Open Sans'
+        font-weight bold
+        cursor pointer
+        &:before
+          content '?'
+        &:after
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          margin-left: 12px;
+          top: 0;
+          top 25px
+          box-sizing: border-box;
+          border: 10px solid black;
+          border-color:transparent transparent #fff #fff;
+          transform-origin: 0 0;
+          transform: rotate(135deg);
+          box-shadow: -2px 2px 5px -1px rgba(0,0,0,.25)
+          z-index 12
+          display none !important
+        &:hover,
+        &.hovered
+          background $orange
+          & + .help-tooltip-body
+            display block
+          &:after
+            display block
+    span.required
+      color #fe0000
+      font-size 10px
+    .step-final
+      a
+        padding 15px 25px
+        font-size 18px
+        font-weight normal
+    .form-row
+      margin-bottom 20px
+      &.border
+        padding-bottom 20px
+        border-bottom 1px solid #c8c8c8
+      &:last-child
+        margin-bottom 0
+      span.label
+        font-size 10px
+        color #8f9597
+        display inline-block
+      input
+        anim()
+        opensans()
+        width 100%
+        border none
+        border-bottom 1px solid #c8c8c8
+        font-size 16px
+        padding 8px 0
+        &:focus
+          border-color $sky
+      // SELECT
+      .selectric-open
+        .selectric
+          .button
+            &:after
+              border-top-color $orange
+      .selectric
+        border none
+        border-bottom 1px solid #c8c8c8
+        background none
+        .label
+          font-size 14px
+          color #000
+          margin-left 0
+        .button
+          background none
+      .selectric-items
+        border 1px solid #c8c8c8
+        background #fff
+        margin-top -1px
+        li
+          font-size 14px
+          &:hover,
+          &.selected
+            background $sky
+            color #fff
+      // grid
+      .car-mark,
+      .car-year
+        margin-bottom 15px
+      .card
+        .notes
+          padding-left 25px
+          a
+            font-size 14px
+            color $blue
+            &:hover
+              color $sky
+              text-decoration underline
+      .docs,
+      .card,
+      .license
+        .radios
+          display block
+          margin-bottom 10px
+          &:last-child
+            margin-bottom 0
+      .terms
+        margin 15px 0
+        position relative
+        @media XS
+          margin 30px 0
+        .icon
+          position absolute
+          left 0
+          top 2px
+        .label
+          font-size 14px
+          line-height 1.3
+          display inline-block
+          vertical-align middle
+          padding-left 25px
+          a
+            color $blue
+            &:hover
+              color $sky
+              text-decoration underline
+    .upload-item
+      & + .step-final
+        margin-top 15px
+      .dropzone
+        anim()
+        position relative
+        height 140px
+        width 100%
+        border 2px dashed #edf1f2
+        background none
+        box-shadow none
+        border-radius 5px
+        padding 15px
+        &.in
+          border-color $sky
+        &.hover
+          background $sky + 95%
+          .icon
+            background $sky
+            &:after
+              background-position -200px -50px
+          .text
+            p:first-child
+              text-decoration underline
+              color $sky
+        &:hover
+          border-color $sky
+          background $sky + 95%
+          .icon
+            background $sky
+            &:after
+              background-position -200px -50px
+          .text
+            p:first-child
+              text-decoration underline
+              color $sky
+        &.fade
+          opacity 1
+        .min-files-balloon
+          width 40px
+          height 40px
+          color #fff
+          border-radius 50%
+          background $orange
+          text-align center
+          line-height 40px
+          font-size 14px
+          position absolute
+          right 15px
+          top 50%
+          margin-top -20px
+          z-index 1
+          display none
+        .icon
+          anim()
+          width 70px
+          height 100px
+          position absolute
+          left 15px
+          top 50%
+          margin-top -(@height/2)
+          background #edf1f2
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -150px -50px;
+            width: 26px;
+            height: 30px;
+            position absolute
+            left 50%
+            top 50%
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+        .text
+          padding-left 85px
+          padding-top 5px
+          @media XS
+            padding-top 35px
+          p
+            font-size 14px
+            color $blue
+            margin-bottom 10px
+            line-height 1
+            &.small
+              font-size 12px
+              color #666
+        .fileinput-button
+          position absolute
+          right 0
+          top 0
+          width 100%
+          height 100%
+      .progress
+        height 5px
+        display none
+      .files
+        .text-danger
+          display none !important
+        > div
+          margin-top 10px
+          p
+            margin-bottom 5px
+            &:last-child
+              margin-bottom 0
+            span
+              display block
+            br
+              display none

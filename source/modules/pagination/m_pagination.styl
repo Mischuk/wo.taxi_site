@@ -1,0 +1,58 @@
+.m_pagination
+  text-align center
+  margin-top 15px
+  @media MD
+    margin-top 40px
+  ul
+    cursor default
+    font-size 0
+  li
+    display inline-block
+    vertical-align middle
+    margin-left 4px
+    margin-right 4px
+    a
+      anim()
+      min-width 0
+      position relative
+      margin-right 0
+      font-size 16px
+      width 30px
+      height 30px
+      line-height 30px
+      color #666
+      display block
+      border-radius $radius
+      &.prev, &.next
+        &:hover
+          background none !important
+      &.next
+        &:after
+          content ''
+          background: url('../images/pagination.png') no-repeat 0 0;
+          width: 8px;
+          height: 14px;
+          position absolute
+          left 50%
+          top 50%
+          margin-top -(@height/2)
+          margin-left -(@width/2)
+        &:hover:after
+          background-position 0 -58px
+      &.prev
+        &:after
+          content ''
+          position absolute
+          background: url('../images/pagination.png') no-repeat 0 -17px;
+          width: 8px;
+          height: 15px;
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        &:hover:after
+          background-position 0 -37px
+      &:hover,
+      &.current
+        background $sky
+        color #fff

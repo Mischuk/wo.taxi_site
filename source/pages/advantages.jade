@@ -1,0 +1,105 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Преимущество
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Топливные карты
+  .page-title
+    .wrapper
+      h3 Почему выгодно работать с нами?
+      h2 Наша комиссия — 0 %
+  .m_advantages
+    .video
+      .image: img(src="images/video-background.png" alt="")
+      #videox
+    .m_pluses
+      .wrapper
+        .list
+          - each item in pluses
+            .item
+              .icon: img(src="#{item.img}" alt="")
+              .desc #{item.desc}
+              .details: a(href="#") Подробнее
+    .m_calc
+      .wrapper
+        .section-title
+          h3 Посчитайте, сколько вы заработаете с нами
+        .row
+          .calculate-form
+            form
+              .row
+                label
+                  | Укажите кол-во рабочих дней
+                  input(class="number-only" id="val-days" type="text" placeholder="" maxlength="2" value="24")
+              .row
+                label
+                  | Расходы на топливо в день (руб)
+                  input(class="number-only cash" id="val-refill" type="text" placeholder="" value="700")
+              .row
+                label
+                  | Ваша выручка в день (руб)
+                  input(class="number-only cash" id="val-profit" type="text" placeholder="" value="3500")
+              .row
+                label
+                  | Комиссия сервиса такси (в процетнах)
+                  input(class="number-only percentage" id="val-commission-1" type="text" placeholder="" maxlength="3" value="20" min="0" max="100")
+              .row
+                label
+                  | Комиссия партнера (в процентах)
+                  input(class="number-only percentage" id="val-commission-2" type="text" placeholder="" maxlength="3" value="5" min="0" max="100")
+              .row
+                .paragraph.small <b>Важно!</b> Мы не берем с Вас комиссию, в отличие от других партнеров
+          .calc-result
+            .circle
+              .icon: img(src="images/calc-icon.png", alt="")
+              .title Ваша выгода
+              .paragraph составит
+              .value-profit
+            .bottom
+              .row
+                .column
+                  .title Работая с нами:
+                  .value-1
+                .column
+                  .title Работая с другими:
+                  .value-2(data-rival="5")
+    .network
+      .wrapper
+        h3 Доступные сервисы такси для подключения
+        p Подключаясь через нас вы получаете самые выгодные условия работы
+        .list
+          .item: a(href="#"): img(src="images/network/1.png" alt="")
+          .item: a(href="#"): img(src="images/network/2.png" alt="")
+          .item: a(href="#"): img(src="images/network/3.png" alt="")
+          .item: a(href="#"): img(src="images/network/4.png" alt="")
+          .item: a(href="#"): img(src="images/network/5.png" alt="")
+          .item: a(href="#"): img(src="images/network/6.png" alt="")
+          .item: a(href="#"): img(src="images/network/7.png" alt="")
+          .item: a(href="#"): img(src="images/network/8.png" alt="")
+          .item: a(href="#"): img(src="images/network/9.png" alt="")
+    .m_start-steps
+      .wrapper
+        .section-title
+          h3 Начать очень просто
+        .list
+          .item
+            .number 1
+            .title: a(href="#") Зарегистрируйтесь
+            .desc Процесс занимает считанные минуты
+          .item
+            .number 2
+            .title: a(href="#") Подпишите договор
+            .desc Подпишите несколько документов у нас в офисе и получите топливную карту
+          .item
+            .number 3
+            .title: a(href="#") Пополните баланс
+            .desc Пополните баланс в личном кабинете и начинайте работу без комиссий
+

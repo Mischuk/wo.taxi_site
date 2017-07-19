@@ -1,0 +1,87 @@
+.m_team-item
+  anim()
+  clearfix()
+  background #fff
+  position relative
+  overflow hidden
+  box-shadow 0 0 5px 1px rgba(66, 72, 74, .2)
+  margin-bottom 10px
+  @media XS
+    height 400px
+    margin-bottom 0
+  &:hover
+    @media LG
+      box-shadow 0 0 10px 2px rgba(66, 72, 74, .3)
+  .image
+    height 400px
+    background-repeat no-repeat
+    background-position top center
+    background-size cover
+    @media XS
+      position absolute
+      left 0
+      top 0
+      width 50%
+      height 100%
+      z-index 1
+    @media LG
+      width 41%
+    a
+      display block
+      width 100%
+      height 100%
+      position relative
+      &:after
+        content ''
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+        background #000
+        opacity 0
+        anim()
+      &:hover
+        &:after
+          opacity .2
+  .details
+    padding 15px
+    @media XS
+      padding-left 53%
+      padding-top 3%
+      padding-bottom 3%
+      padding-right 3%
+      height 100%
+      position relative
+    @media LG
+      padding-left 46%
+      padding-top 25px
+      padding-right 30px
+    &:after
+      @media XS
+        content ''
+        width 47%
+        height 50px
+        position absolute
+        right 0
+        bottom 0
+        box-shadow inset 0 -45px 20px -10px rgba(255,255,255, .95)
+      @media LG
+        width 59%
+    .name
+      a
+        font-size 18px
+        exo()
+        color $blue
+        @media LG
+          font-size 24px
+        &:hover
+          text-decoration underline
+          color $sky
+    .post
+      margin 5px 0
+      color #666
+      font-size 14px
+    .desc
+      font-size 14px
+      margin-top 15px

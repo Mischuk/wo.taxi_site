@@ -1,0 +1,314 @@
+.m_how-steps
+  position relative
+  background url("../images/circle/bg.jpg") no-repeat 50%
+  background-size cover
+  padding 15px 0
+  color #fff
+  @media SM
+    padding-top 30px
+  @media LG
+    padding-top 50px
+  &:before
+    content ''
+    position absolute
+    right 0
+    top 0
+    width 50%
+    height 100%
+    background #000
+    opacity .1
+  .circle
+    margin-top 25px
+    .round
+      position relative
+      width 280px
+      height 280px
+      margin 0 auto
+      border 2px solid #fff
+      border-radius 50%
+      padding 15px
+      @media XS
+        width 450px
+        height 450px
+        padding 30px
+      @media MD
+        width 568px
+        height 635px
+        background url("../images/circle/lines.png") no-repeat 0 0
+        border none
+        border-radius 0
+        padding 70px
+        padding-top 100px
+      &:before
+        content ''
+        height 20px
+        width 2px
+        background #fff
+        position absolute
+        left 50%
+        top -20px
+        margin-left -1px
+        @media MD
+          display none
+      .round-inner
+        background #fff
+        width 100%
+        height 100%
+        border-radius 50%
+        color #000
+        box-shadow 0 0 8px rgba(0,0,0,.2)
+        @media MD
+          width 430px
+          height 430px
+      .round-image
+        padding-top 30px
+        @media XS
+          padding-top 60px
+        @media MD
+          padding-top 90px
+        img
+          max-width 70%
+          max-height 70%
+          display block
+          margin 0 auto
+      .round-text
+        exo()
+        font-weight bold
+        text-transform uppercase
+        font-size 16px
+        line-height 1.2
+        text-align center
+        padding 15px
+        @media XS
+          font-size 22px
+        @media SM
+          font-size 24px
+          padding 15px 30px
+        .strong
+          color $sky
+    .list
+      position relative
+      text-align center
+      padding-bottom 30px
+      @media MD
+        position static
+      &:after
+        content ''
+        width 2px
+        height 100%
+        background #fff
+        position absolute
+        left 50%
+        top 0
+        margin-left -1px
+        @media MD
+          display none
+      .item
+        display inline-block
+        vertical-align top
+        width 49%
+        margin-top 20px
+        @media XS
+          margin-top 30px
+        &:nth-child(even)
+          text-align left
+          padding-left 15px
+        &:nth-child(odd)
+          padding-right 15px
+          text-align right
+        @media MD
+          &:nth-child(2)
+            position absolute
+            left 75%
+            top 300px
+            padding-left 85px
+            width auto
+            .icon
+              position absolute
+              top 0
+              left 0
+            .label
+              max-width 120px
+              text-align left
+              display inline-block
+              margin-top 0
+          &:nth-child(5)
+            position absolute
+            left -160px
+            top 110px
+            padding-right 100px
+            .icon
+              position absolute
+              top 0
+              right 0
+            .label
+              max-width 150px
+              text-align right
+              display inline-block
+          &:nth-child(1)
+            position absolute
+            left -180px
+            top 480px
+            padding-right 90px
+            .icon
+              position absolute
+              top 0
+              right 0
+            .label
+              max-width 200px
+              text-align right
+              display inline-block
+              margin-top 20px
+          &:nth-child(3)
+            position absolute
+            left -240px
+            top 305px
+            padding-right 90px
+            .icon
+              position absolute
+              top 0
+              right 0
+            .label
+              max-width 140px
+              text-align right
+              display inline-block
+          &:nth-child(6)
+            position absolute
+            left 63%
+            width auto
+            top 110px
+            padding-left 130px
+            .icon
+              position absolute
+              top 0
+              left 0
+            .label
+              max-width 180px
+              text-align left
+              display inline-block
+              margin-top 0
+          &:nth-child(4)
+            position absolute
+            left 67%
+            width auto
+            top 490px
+            padding-left 90px
+            .icon
+              position absolute
+              top 0
+              left 0
+            .label
+              max-width 180px
+              text-align left
+              display inline-block
+              margin-top 10px
+        @media screen and (min-width: 1100px)
+          &:nth-child(2)
+            left 74%
+        @media screen and (min-width: 1150px)
+          &:nth-child(2)
+            left 72%
+        @media LG
+          &:nth-child(6)
+            top 125px
+          &:nth-child(2)
+            top 320px
+          &:nth-child(4)
+            top 520px
+            left 66%
+          &:nth-child(5)
+            top 130px
+          &:nth-child(3)
+            top 320px
+          &:nth-child(1)
+            top 510px
+        .icon
+          height 70px
+          line-height 70px
+          img
+            max-height 100%
+            max-width 100%
+            display inline-block
+            vertical-align bottom
+        .label
+          margin-top 10px
+          font-weight 600
+          font-size 14px
+          line-height 1.2
+          @media XS
+            font-size 16px
+          @media SM
+            line-height 1.4
+          @media MD
+            margin-top 0
+
+  .network
+    background #fff
+    border-radius $radius
+    padding 15px
+    color #000
+    margin-bottom 0px
+    box-shadow 0 0 8px rgba(0,0,0,.2)
+    @media XS
+      margin-bottom 15px
+    @media MD
+      margin-bottom 30px
+    @media LG
+      margin-bottom 55px
+    h3
+      font-size 20px
+      line-height 30px
+      text-align center
+      margin-bottom 15px
+    .list
+      clearfix()
+      .item
+        float left
+        height 70px
+        line-height 70px
+        width 31.3%
+        margin-left 3%
+        margin-bottom 3%
+        @media XS
+          width 22.66%
+        @media MD
+          width 12.5
+          width 11.6%
+          margin-left 1%
+          margin-bottom 0
+          &:nth-child(8n+1)
+            margin-left 0
+            clear left
+        @media screen and (max-width: 479px)
+          &:nth-child(3n+1)
+            clear left
+            margin-left 0
+        @media screen and (max-width: 991px) and (min-width: 480px)
+          &:nth-child(4n+1)
+            clear left
+            margin-left 0
+
+        a
+          display block
+          width 100%
+          height 100%
+          border 1px solid #d9dfe3
+          border-radius $radius
+          text-align center
+          &.custom
+            line-height 1
+            display table
+            exo()
+            font-weight bold
+            color $orange
+            text-transform uppercase
+            font-size 12px
+            border-color $orange
+            span
+              display table-cell
+              vertical-align middle
+          img
+            display inline-block
+            vertical-align middle
+            max-height 90%
+            max-width 90%

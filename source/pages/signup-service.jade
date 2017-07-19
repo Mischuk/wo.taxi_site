@@ -1,0 +1,128 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Подключиться к Uber
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-container
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Подключение к такси
+          li: a(href="#") Выбор сервиса
+          li: a(href="#") UBER
+    .page-title
+      .wrapper
+        h2 Подключиться к Uber
+    .m_signup
+      .wrapper
+        .articles-panel
+          .title Информация:
+          ul
+            li: a(href="#") О Uber
+            li: a(href="#") Требования для подключения
+            li: a(href="#") Порядок действий для подключения
+            li: a(href="#") Необходимые документы
+        form(class="signup-form" id="singup-form")
+          .step-1.is-active
+            .sub-step.is-open
+              .step-title Данные водителя
+              .form-row
+                label
+                  span.label Введите ваше ФИО полностью<span class="required">*</span>
+                  input(class="input-driver" type="text" placeholder="Введите ваши ФИО" required autocomplete="off")
+              .form-row
+                label
+                  span.label Введите ваш контактный номер телефона<span class="required">*</span>
+                  input(class="input-driver mask-tel" type="tel" placeholder="Укажите номер телефона" required autocomplete="off")
+              .form-row
+                label
+                  span.label Введите ваш адрес электронной почты<span class="required">*</span>
+                  input(class="input-driver" type="email" placeholder="Укажите email" required autocomplete="off")
+            .sub-step
+              .step-title Данные об автомобиле
+              .form-row
+                .car-mark
+                  select(required)
+                    option(selected disabled) Выберите марку автомобиля
+                    option(value="bmw") BMW
+                    option(value="citroen") Citroen
+                    option(value="ford") Ford
+                    option(value="mazda") Mazda
+                    option(value="mini") Mini
+                    option(value="mitsubishi") Mitsubishi
+                    option(value="peugeot") Peugeot
+                    option(value="renault") Renault
+                    option(value="Skoda") Skoda
+                .car-year
+                  select(required)
+                    option(selected disabled) Год выпуска
+                    option(value="2017") 2017
+                    option(value="2016") 2016
+                    option(value="2015") 2015
+                    option(value="2014") 2014
+                    option(value="2013") 2013
+                    option(value="2012") 2012
+                    option(value="2011") 2011
+                    option(value="2010") 2010
+                    option(value="2009") 2009
+                    option(value="2008") 2008
+                    option(value="2007") 2007
+                    option(value="2006") 2006
+              .form-row
+                .license
+                  .btn-group
+                    .radios
+                      label
+                        input(type="radio" name="license" value="1" checked)
+                        i.icon
+                        i.label Есть лицензия
+                    .radios
+                      label
+                        input(type="radio" name="license" value="0")
+                        i.icon
+                        i.label Нет лицензии
+            .sub-step
+              .step-title Выберите условия договора
+              .form-row.border
+                .card
+                  .btn-group
+                    .radios
+                      label
+                        input(type="radio" name="card" value="1" checked)
+                        i.icon
+                        i.label С выдачей топливной карты — коммисия 0%
+                      .notes
+                        a(target="_blank" href="#") Типы топливных карт
+                    .radios
+                      label
+                        input(type="radio" name="card" value="0")
+                        i.icon
+                        i.label Без топливной карты — коммисия 0%
+              .form-row.border
+                .docs
+                  .btn-group
+                    .radios
+                      label
+                        input(type="radio" name="docs" value="1" checked)
+                        i.icon
+                        i.label Загрузить фото документов, мы автоматически Вас зарегистрируем
+                    .radios
+                      label
+                        input(type="radio" name="docs" value="0")
+                        i.icon
+                        i.label Отправить заявку менеджеру, который Вас зарегистрирует
+              .form-row
+                .terms
+                  .checkboxes
+                    label
+                      input(type="checkbox" name="terms")
+                      .icon
+                      .label Я даю согласение на <a target="_blank" href="#">обработку персональных данных</a> и принимаю условия <a target="_blank" href="#">договора</a>
+              .step-final
+                button(id="step-1-submit" type="submit" class="btn btn-orange" data-next="upload") Продолжить
+

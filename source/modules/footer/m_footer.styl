@@ -1,0 +1,225 @@
+.m_footer
+  position absolute
+  left 0
+  bottom 0
+  width 100%
+  .top-panel
+    background $sky
+    padding 30px 0
+    @media LG
+      padding 40px 0
+    .label
+      exo()
+      font-weight bold
+      color #fff
+      text-align center
+      font-size 30px
+      line-height 1
+      margin-bottom 15px
+      @media MD
+        float left
+        line-height 46px
+        margin-bottom 0
+    .actions
+      text-align center
+      font-size 0
+      @media MD
+        float right
+      > div
+        display inline-block
+        vertical-align middle
+        margin 5px
+        @media LG
+          margin 0
+      div:first-child
+        @media LG
+          margin-right 30px
+      a
+        font-size 16px
+        font-weight 600
+        padding 15px 15px
+        @media LG
+          padding 15px 35px
+  .bottom-panel
+    exo()
+    background #2b2f30
+    color #8f9597
+    padding 30px 0
+    font-size 15px
+    line-height 1
+    text-align center
+    @media XS
+      text-align left
+    @media LG
+      padding 60px 0
+  .nav
+    display none
+    @media SM
+      clearfix()
+      float left
+      display block
+      width 40%
+      padding 0 10px
+    @media MD
+      width 55%
+    @media LG
+      width 65%
+      display table
+    .col
+      display inline-block
+      vertical-align top
+      width 49%
+      float none
+      @media MD
+        width auto
+        & + .col
+          padding-left 15px
+      @media LG
+        display table-cell
+    .title
+      exo()
+      text-transform uppercase
+      font-weight bold
+      @media LG
+        margin-bottom 20px
+    ul
+      margin-bottom 15px
+      li
+        a
+          display inline-block
+          vertical-align middle
+          padding 5px 0
+          text-decoration underline
+          color #8f9597
+          @media LG
+            padding 10px 0
+          &:hover
+            color #fff
+  .search
+    display none
+    @media SM
+      float left
+      display block
+      width 30%
+    @media MD
+      width 20%
+    @media LG
+      width 15%
+    form
+      position relative
+      width 100%
+    input
+      width 100%
+      height 36px
+      border none
+      border-bottom 1px solid #8f9597
+      padding-left 10px
+      padding-right 36px
+      background none
+      opensans()
+      color #8f9597
+      &:focus
+        color #fff
+        border-color #fff
+    button
+      position absolute
+      right 0
+      top 0
+      z-index 1
+      border none
+      width 36px
+      height 36px
+      background none
+      &:after
+        content ''
+        position absolute
+        background: url('../images/sprite.png') no-repeat -100px -50px;
+        width: 15px;
+        height: 16px;
+        position absolute
+        left 50%
+        top 50%
+        margin-left -7.5px
+        margin-top -8px
+
+  .developed
+    font-size 12px
+    margin-top 10px
+    @media XS
+      float right
+      text-align right
+      padding-top 15px
+    a
+      color #8f9597
+      text-decoration underline
+      &:hover
+        color #fff
+  .logo
+    margin-top 10px
+    @media XS
+      float left
+  .info
+    @media SM
+      float left
+      width 30%
+    @media MD
+      width 25%
+    @media LG
+      width 20%
+    .contacts
+      @media XS
+        display inline-block
+        vertical-align top
+        width 49%
+      @media SM
+        width 100%
+        display block
+      > div
+        margin-bottom 10px
+        @media LG
+          margin-bottom 20px
+      a
+        color #fff
+        &:hover
+          text-decoration underline
+    .user-action
+      @media XS
+        display inline-block
+        vertical-align top
+        width 49%
+        text-align right
+      @media SM
+        display block
+        width 100%
+        text-align left
+      .socials
+        margin-top 10px
+        @media LG
+          margin-top 30px
+          margin-bottom 20px
+        a
+          display inline-block
+          vertical-align middle
+          width 20px
+          height 20px
+          margin 0 2px
+          background-image url("../images/sprite.png")
+          background-repeat no-repeat
+          &.ok
+            background-position -50px 0
+          &.vk
+            background-position -100px 0
+          &.fb
+            background-position -150px 0
+          &:hover
+            opacity .8
+      .callback
+        margin-top 10px
+        @media XS
+          margin-top 0
+        @media LG
+          margin-top 30px
+        a
+          text-transform uppercase
+          font-size 13px
+          padding 10px 15px

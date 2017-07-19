@@ -1,0 +1,55 @@
+header.m_header
+  .top
+    .wrapper
+      nav.menu
+        ul
+          li: a(href="#"): span О компании
+          li: a(href="#"): span Блог
+          li: a(href="#"): span Вакансии
+          li: a(href="#"): span Форум
+          li: a(href="#"): span Контакты
+      .contacts
+        .tel 8 (804) 333-04-16
+        .callback: a(class="btn-modal" href="#modal-callback"): span Обратный звонок
+      .socials
+        a(class="fb" title="Facebook" href="#")
+        a(class="vk" title="Vk" href="#")
+        a(class="ok" title="Odnoklassniki" href="#")
+      .help
+        a(href="#"): span Центр помощи
+      .user-locate
+        .locate-result
+          span.label Регион:
+          span.value: a(href="#"): span Санкт-Петербург
+        .locate-check
+          form
+            .form-row
+              .label Ваше местоположение
+              .value Санкт-Петербург
+            .form-row
+              button(type="submit") Да
+              a(class="btn-modal" id="locate-change" href="#modal-locate") Нет, изменить
+  .bottom
+    .wrapper
+      .main-menu
+        a(class="btn-burger" href="#")
+          span
+      .logo: a(href="#")
+      .bottom-menu
+        ul
+          li: a(href="#") Преимущества
+          li: a(href="#") Подключение к такси
+          li: a(href="#") Топливные карты
+      .right
+        .search
+          button(type="button" class="search-toggle")
+          form
+            input(type="text" placeholder="Введите запрос для поиска")
+            button(type="submit")
+        .actions
+          .signup: a(class="btn btn-white" href="#") Войти
+          .signin: a(class="btn btn-orange" href="#") Стать водителем
+
+
+
+

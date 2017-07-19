@@ -1,0 +1,49 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title О нас
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .page-picture-title
+    .background(style="background-image: url('images/page-title-about.jpg')")
+    .wrapper
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") О нас
+      .vertical-outer
+        .vertical-inner
+          h2.border Контакты
+          p Компания Виалон Ойл предлагает своим Клиентам совокупность новых уникальных решений: Wialon OIL Cards и Wialon OIL Service.
+  .page-container
+    main
+      article
+        h3 Краткий заголовок
+        lorem(size="4")
+  .m_pluses
+    .wrapper
+      .section-title
+        h3 НАШИ ПРЕИМУЩЕСТВА
+      .list
+        - each item in pluses
+          .item
+            .icon: img(src="#{item.img}" alt="")
+            .desc #{item.desc}
+            .details: a(href="#") Подробнее
+  .m_picture-nav
+    .wrapper
+      .item
+        a(href="#" style="background-image: url('images/nav-pic/1.jpg')")
+          span Команда
+      .item
+        a(href="#" style="background-image: url('images/nav-pic/2.jpg')")
+          span Вакансии
+      .item
+        a(href="#" style="background-image: url('images/nav-pic/3.jpg')")
+          span Центр помощи
+      .item
+        a(href="#" style="background-image: url('images/nav-pic/4.jpg')")
+          span Контакты

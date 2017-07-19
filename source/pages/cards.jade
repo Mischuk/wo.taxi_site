@@ -1,0 +1,60 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Топливные карты
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_breadcrumbs
+    .wrapper
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Топливные карты
+  .page-title
+    .wrapper
+      h2 Топливные карты
+  .m_cards
+    .lead(style="background-image: url('images/cards-bg.jpg')")
+      .details
+        a(class="btn btn-white" href="#") Подробнее
+    .cards-list
+      .wrapper
+        .row
+          .col.xs1.sm2.md3
+            .item
+              .image: img(src="images/cards-1.png" alt="")
+              .title Газпромнефть
+              .desc Wialon OIL объединяет в себе все преимущества использования системы мониторинга транспорта и топливных карт, а также предлагает Клиентам уникальные возможности контроля.
+              .details
+                a(class="btn" href="#") Подробнее
+          .col.xs1.sm2.md3
+            .item
+              .image: img(src="images/cards-2.png" alt="")
+              .title Лукойл
+              .desc Wialon OIL объединяет в себе все преимущества использования системы мониторинга транспорта и топливных карт, а также предлагает Клиентам уникальные возможности контроля.
+              .details
+                a(class="btn" href="#") Подробнее
+          .col.xs1.sm2.md3
+            .item
+              .image: img(src="images/cards-3.png" alt="")
+              .title Газпромнефть
+              .desc Wialon OIL объединяет в себе все преимущества использования системы мониторинга транспорта и топливных карт, а также предлагает Клиентам уникальные возможности контроля.
+              .details
+                a(class="btn" href="#") Подробнее
+    .guide
+      .wrapper
+        .row
+          .col.xs1.sm2
+            .item
+              a(href="#" style="background-image: url('images/cards-guide-1.png')")
+                .vertical-outer
+                  .vertical-inner
+                    span Как пользоваться картой?
+          .col.xs1.sm2
+            .item
+              a(href="#" style="background-image: url('images/cards-guide-2.png')")
+                .vertical-outer
+                  .vertical-inner
+                    span Как получить карту?

@@ -1,0 +1,268 @@
+$wrapper = 1200px
+$gutter = 2%
+
+html
+  position relative
+  min-height 100%
+.container
+  height 100%
+.page-container
+  background #edf1f2
+  main
+    padding-top 15px
+    .m_breadcrumbs
+      padding-top 0
+  &.blue
+    main
+      background #fff
+      padding-top 15px
+      box-shadow 0 0 10px rgba(0,0,0,.25)
+      padding-left 0
+      padding-right 0
+      article
+        padding-left 15px
+        padding-right 15px
+        @media SM
+          padding-left 50px
+          padding-right 50px
+        @media MD
+          padding-left 100px
+          padding-right 100px
+      .lead-paragraph p,
+      .m_similar-articles
+        padding-left 15px
+        padding-right 15px
+        @media SM
+          padding-left 50px
+          padding-right 50px
+        @media MD
+          padding-left 100px
+          padding-right 100px
+      .lead-paragraph
+        exo()
+        font-size 20px
+        line-height 30px
+        @media XS
+          font-size 24px
+          line-height 34px
+        img
+          width 100%
+          max-width 100%
+        p
+          @media MD
+            margin-top 20px
+
+
+
+.wrapper
+  clearfix()
+  position relative
+  max-width $wrapper
+  height 100%
+  padding-left 15px
+  padding-right 15px
+  margin-left auto
+  margin-right auto
+
+main
+  display block
+  max-width $wrapper
+  padding 30px 15px
+  margin 0 auto
+  position relative
+.backdrop
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background #000
+  opacity .5
+  z-index 100
+  display none
+
+// Grid layout
+.row
+  clearfix()
+  .col
+    float left
+    width 100%
+    margin ($gutter/2) 0
+    @media XS
+      &.xs1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.xs2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.xs3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.xs4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.xs6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media SM
+      &.sm1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.sm2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.sm3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.sm4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.sm6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media MD
+      &.md1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.md2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.md3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.md4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.md6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media LG
+      &.lg1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.lg2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.lg3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.lg4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.lg6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+
+
+
+
+.page-picture-title + .page-container main
+  padding 30px 15px
