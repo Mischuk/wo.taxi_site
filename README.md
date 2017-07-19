@@ -1,7 +1,7 @@
 # Wo.Taxi
 
 ## Demo
-Demo: [frontend.watch/wo.taxi](http://frontend.watch/wotaxi)
+Demo: [frontend.watch/wo.taxi](http://frontend.watch/wotaxi/templates.html)
 
 Download: [wo.taxi_site-master.zip](https://github.com/Mischuk/wo.taxi_site/archive/master.zip)
 
