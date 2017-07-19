@@ -1,8 +1,8 @@
-# Project
+# Wo.Taxi
 
 ## Demo
-Demo: [frontend.watch/project](http://frontend.watch/project)
-Download: [project-master.zip](https://github.com/Mischuk/project/archive/master.zip)
+Demo: [frontend.watch/wo.taxi](http://frontend.watch/wotaxi)
+Download: [wo.taxi_site-master.zip](https://github.com/Mischuk/wo.taxi_site/archive/master.zip)
 
 ## Description
 * Task-runner [Gulp](http://gulpjs.com/)
