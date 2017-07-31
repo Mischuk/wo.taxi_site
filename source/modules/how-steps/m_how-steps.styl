@@ -34,7 +34,7 @@
       @media MD
         width 568px
         height 635px
-        background url("../images/circle/lines.png") no-repeat 0 0
+        // background url("../images/circle/lines.png") no-repeat 0 0
         border none
         border-radius 0
         padding 70px
@@ -50,6 +50,16 @@
         margin-left -1px
         @media MD
           display none
+      @keyframes circlein
+        0%
+          transform: rotateX(0deg);
+        100%
+          transform: rotateX(360deg);
+      @keyframes circleout
+        0%
+          transform: rotateX(360deg);
+        100%
+          transform: rotateX(0deg);
       .round-inner
         background #fff
         width 100%
@@ -57,10 +67,22 @@
         border-radius 50%
         color #000
         box-shadow 0 0 8px rgba(0,0,0,.2)
+        transform: rotateX(0deg);
+        transition:transform 2s;
         @media MD
           width 430px
           height 430px
+        &.anim-in
+          animation 2s circlein
+          .round-image,
+          .round-text
+            opacity 0
+        &.anim-in-content
+          .round-image,
+          .round-text
+            opacity 1
       .round-image
+        transition opacity 1s ease-out
         padding-top 30px
         @media XS
           padding-top 60px
@@ -72,6 +94,7 @@
           display block
           margin 0 auto
       .round-text
+        transition opacity 1s ease-out
         exo()
         font-weight bold
         text-transform uppercase
@@ -86,6 +109,115 @@
           padding 15px 30px
         .strong
           color $sky
+      // ARC
+      @media MD
+        .arcs
+          position absolute
+          left 0
+          top 0
+          width 100%
+          height 100%
+          &.anim-in
+            .line-top
+              transition height .25s ease-out
+              height 29px
+            .arc-1
+              transition height .5s ease-out
+              transition-delay .25s
+              height 53px
+            .arc-2-1,
+            .arc-2-2
+              transition height .5s ease-out
+              transition-delay 1s
+            .arc-2-1
+              height 88px
+            .arc-2-2
+              height 86px
+            .arc-3-1,
+            .arc-3-2
+              transition height .5s ease-out
+              transition-delay 1.75s
+            .arc-3-1
+              height 94px
+            .arc-3-2
+              height 96px
+            .arc-4
+              transition height .5s ease-out
+              transition-delay 2.5s
+              height 63px
+            .line-bottom
+              transition height .25s ease-out
+              transition-delay 3s
+              height 30px
+          .line-top
+            width 3px
+            // height 29px
+            background url("../images/circle/line-top.png") no-repeat 0 0
+            position absolute
+            left 50%
+            top 0
+            margin-left -1.5px
+            height 0
+          .line-bottom
+            width 3px
+            // height 30px
+            height 0
+            background url("../images/circle/line-top.png") no-repeat 0 0
+            position absolute
+            left 50%
+            top 605px
+            margin-left -1.5px
+          .arc-1
+            position absolute
+            top 28px
+            left 50%
+            width 306px
+            margin-left -153px
+            // height 53px
+            height 0
+            background url("../images/circle/arc-1.png") no-repeat 0 0
+          .arc-2-1
+            position absolute
+            left 0
+            width 41px
+            // height 88px
+            height 0
+            top 170px
+            background url("../images/circle/arc-2-1.png") no-repeat 0 0
+          .arc-2-2
+            position absolute
+            right 4px
+            width 39px
+            // height 86px
+            height 0
+            top 165px
+            background url("../images/circle/arc-2-2.png") no-repeat 0 0
+          .arc-3-1
+            position absolute
+            left 0
+            width 37px
+            // height 94px
+            height 0
+            top 365px
+            background url("../images/circle/arc-3-1.png") no-repeat 0 0
+          .arc-3-2
+            position absolute
+            right 0px
+            width 37px
+            // height 96px
+            height 0
+            top 362px
+            background url("../images/circle/arc-3-2.png") no-repeat 0 0
+          .arc-4
+            position absolute
+            top 543px
+            left 50%
+            width 353px
+            margin-left -176.5px
+            // height 63px
+            height 0
+            background url("../images/circle/arc-4.png") no-repeat 0 0
+
     .list
       position relative
       text-align center
@@ -113,22 +245,53 @@
         &:nth-child(even)
           text-align left
           padding-left 15px
+          @media MD
+            transform translateX(100px)
+            opacity 0
         &:nth-child(odd)
           padding-right 15px
           text-align right
+          @media MD
+            transform translateX(-100px)
+            opacity 0
         @media MD
+          &.anim-in
+            &:nth-child(5),
+            &:nth-child(6)
+              transition all .5s ease-out
+              transition-delay .75s
+              opacity 1
+              transform translateX(0)
+            &:nth-child(2),
+            &:nth-child(3)
+              transition all .5s ease-out
+              transition-delay 1.5s
+              opacity 1
+              transform translateX(0)
+            &:nth-child(1),
+            &:nth-child(4)
+              transition all .5s ease-out
+              transition-delay 2.25s
+              opacity 1
+              transform translateX(0)
+          &.blur
+            .icon,
+            .label
+              opacity .4
+              filter blur(1px)
           &:nth-child(2)
             position absolute
             left 75%
             top 300px
-            padding-left 85px
+            padding-left 0
             width auto
             .icon
               position absolute
               top 0
               left 0
             .label
-              max-width 120px
+              max-width 205px
+              padding-left 85px
               text-align left
               display inline-block
               margin-top 0
@@ -136,26 +299,28 @@
             position absolute
             left -160px
             top 110px
-            padding-right 100px
+            padding-right 0
             .icon
               position absolute
               top 0
               right 0
             .label
-              max-width 150px
+              padding-right 100px
+              max-width 250px
               text-align right
               display inline-block
           &:nth-child(1)
             position absolute
             left -180px
             top 480px
-            padding-right 90px
+            padding-right 0
             .icon
               position absolute
               top 0
               right 0
             .label
-              max-width 200px
+              max-width 290px
+              padding-right 90px
               text-align right
               display inline-block
               margin-top 20px
@@ -163,13 +328,14 @@
             position absolute
             left -240px
             top 305px
-            padding-right 90px
+            padding-right 0
             .icon
               position absolute
               top 0
               right 0
             .label
-              max-width 140px
+              padding-right 90px
+              max-width 230px
               text-align right
               display inline-block
           &:nth-child(6)
@@ -177,13 +343,14 @@
             left 63%
             width auto
             top 110px
-            padding-left 130px
+            padding-left 0
             .icon
               position absolute
               top 0
               left 0
             .label
-              max-width 180px
+              padding-left 130px
+              max-width 310px
               text-align left
               display inline-block
               margin-top 0
@@ -192,13 +359,14 @@
             left 67%
             width auto
             top 490px
-            padding-left 90px
+            padding-left 0
             .icon
               position absolute
               top 0
               left 0
             .label
-              max-width 180px
+              padding-left 90px
+              max-width 270px
               text-align left
               display inline-block
               margin-top 10px
@@ -223,18 +391,24 @@
           &:nth-child(1)
             top 510px
         .icon
+          @media MD
+            transition all 1.5s cubic-bezier(.25,.8,.25,1)
           height 70px
           line-height 70px
+          cursor pointer
           img
             max-height 100%
             max-width 100%
             display inline-block
             vertical-align bottom
         .label
+          @media MD
+            transition all 1.5s cubic-bezier(.25,.8,.25,1)
           margin-top 10px
           font-weight 600
           font-size 14px
           line-height 1.2
+          cursor pointer
           @media XS
             font-size 16px
           @media SM
@@ -260,34 +434,36 @@
       line-height 30px
       text-align center
       margin-bottom 15px
+    .network-carousel
+      padding-left 30px
+      padding-right 30px
+    .slick-arrow
+      width 16px
+      height 16px
+      position absolute
+      top 50%
+      margin-top -8px
+      border none
+      text-indent -9999px
+      font-size 0
+      z-index 2
+      &.slick-prev
+        left 0
+        background url("../images/back.png") no-repeat 0 0
+      &.slick-next
+        right 0
+        background url("../images/next.png") no-repeat 0 0
+    .slick-slide
+      margin 0 10px
+    .slick-list
+      margin 0 -10px
     .list
       clearfix()
       .item
         float left
         height 70px
+        width 100%
         line-height 70px
-        width 31.3%
-        margin-left 3%
-        margin-bottom 3%
-        @media XS
-          width 22.66%
-        @media MD
-          width 12.5
-          width 11.6%
-          margin-left 1%
-          margin-bottom 0
-          &:nth-child(8n+1)
-            margin-left 0
-            clear left
-        @media screen and (max-width: 479px)
-          &:nth-child(3n+1)
-            clear left
-            margin-left 0
-        @media screen and (max-width: 991px) and (min-width: 480px)
-          &:nth-child(4n+1)
-            clear left
-            margin-left 0
-
         a
           display block
           width 100%

@@ -17,7 +17,7 @@ $(function() {
     function inputMask() {
       $(".mask-date").mask("99.99.9999",{placeholder:"__.__.____"});
       $(".mask-year").mask("9999",{placeholder:""});
-      $(".mask-tel").mask("+7 (999) 999-99-99",{placeholder:"X"});
+
     };
     inputMask();
 
@@ -259,7 +259,11 @@ $(function() {
           var eq = $(this).val();
           SELECT_CAR_FILLED++;
           if ( SELECT_CAR_FILLED == SELECT_CAR_REQUIRED) {
-            $('.step-1 .sub-step').eq(2).addClass('is-open');
+            $('.step-1 .sub-step').eq(2).slideDown('500', function(){
+              $('.step-1 .sub-step').eq(2).addClass('is-open');
+            });
+            $('.signup-progressbar .status').animate({ width:'100%' });
+            $('.signup-progressbar i span').text('3');
           }
       });
 
@@ -274,9 +278,14 @@ $(function() {
 
       function checkNextStep() {
         if ( INPUT_DRIVER_FILLED == INPUT_DRIVER_REQUIRED) {
-          $('.step-1 .sub-step').eq(1).addClass('is-open');
+          $('.step-1 .sub-step').eq(1).slideDown('500', function(){
+            $('.step-1 .sub-step').eq(1).addClass('is-open');
+          });
+          $('.signup-progressbar .status').animate({ width:'66.666%' });
+          $('.signup-progressbar i span').text('2');
         }
       }
+      /*
       $('#singup-form .input-driver[type=email]').on('change', function(e){
         if ( $(this).val() != '' ) {
           INPUT_DRIVER_FILLED++;
@@ -303,6 +312,36 @@ $(function() {
         checkNextStep();
 
       });
+      */
+
+      function validatestp() {
+        INPUT_DRIVER_FILLED = 0;
+        $('#singup-form .input-driver').each(function(){
+
+          if ( $(this).hasClass('validate') ) {
+            INPUT_DRIVER_FILLED++;
+          }
+        });
+        checkNextStep();
+      }
+
+      $('#singup-form .input-driver[type=text]').on('keyup', function(e){
+        if ( $(this).val() != '' ) {
+          $(this).addClass('validate');
+          validatestp();
+        } else {
+          $(this).removeClass('validate');
+        }
+      });
+
+      $(".mask-tel").mask("+7 (999) 999-99-99",
+        {placeholder:"X",
+          completed: function(){
+            $(this).addClass('validate');
+            validatestp();
+          }
+        }
+      );
 
       function step1status() {
         var REDIRECT_TO_UPLOAD_PAGE = $('input[name="docs"]:checked').val();
@@ -381,7 +420,13 @@ $(function() {
         var files_uploaded = this_files.find('.attached-file').length;
         $(this).next().fadeIn('300').html(files_uploaded+'/'+min_files);
         if ( min_files == files_uploaded) {
-          $(this).parents('.sub-step').next().addClass('is-open');
+          $(this).parents('.sub-step').next().slideDown('500', function(){
+            $(this).parents('.sub-step').next().addClass('is-open');
+          });
+          var STEPS_NUM = 8;
+          var status_width = (100/STEPS_NUM)*($(this).parents('.sub-step').index()+1);
+          $('.signup-progressbar .status').animate({ width:status_width+'%' });
+          $('.signup-progressbar i span').text($(this).parents('.sub-step').index());
         }
         $.each(data.files, function (index, file) {
             var node = $('<p/>')
@@ -473,6 +518,57 @@ $(function() {
         console.log('saved');
       }
     }
+
+    $('.network-carousel').slick({
+      infinite: false,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 568,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 5
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 6,
+            slidesToScroll: 6
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 7,
+            slidesToScroll: 7
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 8,
+            slidesToScroll: 8
+          }
+        }
+      ]
+    });
 
     //=include modules.js
 });

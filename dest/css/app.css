@@ -1965,6 +1965,35 @@ table tr:hover td {
     font-size: 24px;
   }
 }
+.m_advantages .network .network-carousel {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.m_advantages .network .slick-arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  border: none;
+  text-indent: -9999px;
+  font-size: 0;
+  z-index: 2;
+}
+.m_advantages .network .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../images/back.png") no-repeat 0 0;
+}
+.m_advantages .network .slick-arrow.slick-next {
+  right: 0;
+  background: url("../images/next.png") no-repeat 0 0;
+}
+.m_advantages .network .slick-slide {
+  margin: 0 10px;
+}
+.m_advantages .network .slick-list {
+  margin: 0 -10px;
+}
 .m_advantages .network .list:before,
 .m_advantages .network .list:after {
   content: '';
@@ -1972,39 +2001,8 @@ table tr:hover td {
   clear: both;
 }
 .m_advantages .network .list .item {
-  float: left;
   height: 70px;
   line-height: 70px;
-  width: 31.3%;
-  margin-left: 3%;
-  margin-bottom: 3%;
-}
-@media only screen and (min-width: 480px) {
-  .m_advantages .network .list .item {
-    width: 22.66%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .m_advantages .network .list .item {
-    width: 10.2%;
-    margin-left: 1%;
-    margin-bottom: 0;
-  }
-  .m_advantages .network .list .item:first-child {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 479px) {
-  .m_advantages .network .list .item:nth-child(3n+1) {
-    clear: left;
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 991px) and (min-width: 480px) {
-  .m_advantages .network .list .item:nth-child(4n+1) {
-    clear: left;
-    margin-left: 0;
-  }
 }
 .m_advantages .network .list .item a {
   display: block;
@@ -3720,6 +3718,7 @@ table tr:hover td {
   margin: 0 1px;
   background-image: url("../images/sprite.png");
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 @media only screen and (min-width: 480px) {
   .m_header .socials a {
@@ -3736,7 +3735,7 @@ table tr:hover td {
   background-position: -100px 0;
 }
 .m_header .socials a:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 .m_header .contacts,
 .m_sidebar-panel .header .contacts {
@@ -3970,7 +3969,6 @@ table tr:hover td {
   .m_how-steps .circle .round {
     width: 568px;
     height: 635px;
-    background: url("../images/circle/lines.png") no-repeat 0 0;
     border: none;
     border-radius: 0;
     padding: 70px;
@@ -4000,6 +3998,13 @@ table tr:hover td {
   color: #000;
   -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.2);
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  -o-transition: transform 2s, -o-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s, -o-transform 2s;
 }
 @media only screen and (min-width: 992px) {
   .m_how-steps .circle .round .round-inner {
@@ -4007,7 +4012,23 @@ table tr:hover td {
     height: 430px;
   }
 }
+.m_how-steps .circle .round .round-inner.anim-in {
+  -webkit-animation: 2s circlein;
+  -o-animation: 2s circlein;
+  animation: 2s circlein;
+}
+.m_how-steps .circle .round .round-inner.anim-in .round-image,
+.m_how-steps .circle .round .round-inner.anim-in .round-text {
+  opacity: 0;
+}
+.m_how-steps .circle .round .round-inner.anim-in-content .round-image,
+.m_how-steps .circle .round .round-inner.anim-in-content .round-text {
+  opacity: 1;
+}
 .m_how-steps .circle .round .round-image {
+  -webkit-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
   padding-top: 30px;
 }
 @media only screen and (min-width: 480px) {
@@ -4027,6 +4048,9 @@ table tr:hover td {
   margin: 0 auto;
 }
 .m_how-steps .circle .round .round-text {
+  -webkit-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -4048,6 +4072,202 @@ table tr:hover td {
 }
 .m_how-steps .circle .round .round-text .strong {
   color: #00b7f4;
+}
+@media only screen and (min-width: 992px) {
+  .m_how-steps .circle .round .arcs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .line-top {
+    -webkit-transition: height 0.25s ease-out;
+    -o-transition: height 0.25s ease-out;
+    transition: height 0.25s ease-out;
+    height: 29px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-1 {
+    -webkit-transition: height 0.5s ease-out;
+    -o-transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    -webkit-transition-delay: 0.25s;
+    -o-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    height: 53px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-2-1,
+  .m_how-steps .circle .round .arcs.anim-in .arc-2-2 {
+    -webkit-transition: height 0.5s ease-out;
+    -o-transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-2-1 {
+    height: 88px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-2-2 {
+    height: 86px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-3-1,
+  .m_how-steps .circle .round .arcs.anim-in .arc-3-2 {
+    -webkit-transition: height 0.5s ease-out;
+    -o-transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    -webkit-transition-delay: 1.75s;
+    -o-transition-delay: 1.75s;
+    transition-delay: 1.75s;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-3-1 {
+    height: 94px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-3-2 {
+    height: 96px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .arc-4 {
+    -webkit-transition: height 0.5s ease-out;
+    -o-transition: height 0.5s ease-out;
+    transition: height 0.5s ease-out;
+    -webkit-transition-delay: 2.5s;
+    -o-transition-delay: 2.5s;
+    transition-delay: 2.5s;
+    height: 63px;
+  }
+  .m_how-steps .circle .round .arcs.anim-in .line-bottom {
+    -webkit-transition: height 0.25s ease-out;
+    -o-transition: height 0.25s ease-out;
+    transition: height 0.25s ease-out;
+    -webkit-transition-delay: 3s;
+    -o-transition-delay: 3s;
+    transition-delay: 3s;
+    height: 30px;
+  }
+  .m_how-steps .circle .round .arcs .line-top {
+    width: 3px;
+    background: url("../images/circle/line-top.png") no-repeat 0 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -1.5px;
+    height: 0;
+  }
+  .m_how-steps .circle .round .arcs .line-bottom {
+    width: 3px;
+    height: 0;
+    background: url("../images/circle/line-top.png") no-repeat 0 0;
+    position: absolute;
+    left: 50%;
+    top: 605px;
+    margin-left: -1.5px;
+  }
+  .m_how-steps .circle .round .arcs .arc-1 {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    width: 306px;
+    margin-left: -153px;
+    height: 0;
+    background: url("../images/circle/arc-1.png") no-repeat 0 0;
+  }
+  .m_how-steps .circle .round .arcs .arc-2-1 {
+    position: absolute;
+    left: 0;
+    width: 41px;
+    height: 0;
+    top: 170px;
+    background: url("../images/circle/arc-2-1.png") no-repeat 0 0;
+  }
+  .m_how-steps .circle .round .arcs .arc-2-2 {
+    position: absolute;
+    right: 4px;
+    width: 39px;
+    height: 0;
+    top: 165px;
+    background: url("../images/circle/arc-2-2.png") no-repeat 0 0;
+  }
+  .m_how-steps .circle .round .arcs .arc-3-1 {
+    position: absolute;
+    left: 0;
+    width: 37px;
+    height: 0;
+    top: 365px;
+    background: url("../images/circle/arc-3-1.png") no-repeat 0 0;
+  }
+  .m_how-steps .circle .round .arcs .arc-3-2 {
+    position: absolute;
+    right: 0px;
+    width: 37px;
+    height: 0;
+    top: 362px;
+    background: url("../images/circle/arc-3-2.png") no-repeat 0 0;
+  }
+  .m_how-steps .circle .round .arcs .arc-4 {
+    position: absolute;
+    top: 543px;
+    left: 50%;
+    width: 353px;
+    margin-left: -176.5px;
+    height: 0;
+    background: url("../images/circle/arc-4.png") no-repeat 0 0;
+  }
+}
+@-webkit-keyframes circlein {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+}
+@-o-keyframes circlein {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes circlein {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+}
+@-webkit-keyframes circleout {
+  0% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes circleout {
+  0% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes circleout {
+  0% {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
 }
 .m_how-steps .circle .list {
   position: relative;
@@ -4089,16 +4309,82 @@ table tr:hover td {
   text-align: left;
   padding-left: 15px;
 }
+@media only screen and (min-width: 992px) {
+  .m_how-steps .circle .list .item:nth-child(even) {
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
 .m_how-steps .circle .list .item:nth-child(odd) {
   padding-right: 15px;
   text-align: right;
 }
 @media only screen and (min-width: 992px) {
+  .m_how-steps .circle .list .item:nth-child(odd) {
+    -webkit-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .m_how-steps .circle .list .item.anim-in:nth-child(5),
+  .m_how-steps .circle .list .item.anim-in:nth-child(6) {
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition-delay: 0.75s;
+    -o-transition-delay: 0.75s;
+    transition-delay: 0.75s;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .m_how-steps .circle .list .item.anim-in:nth-child(2),
+  .m_how-steps .circle .list .item.anim-in:nth-child(3) {
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition-delay: 1.5s;
+    -o-transition-delay: 1.5s;
+    transition-delay: 1.5s;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .m_how-steps .circle .list .item.anim-in:nth-child(1),
+  .m_how-steps .circle .list .item.anim-in:nth-child(4) {
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition-delay: 2.25s;
+    -o-transition-delay: 2.25s;
+    transition-delay: 2.25s;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .m_how-steps .circle .list .item.blur .icon,
+  .m_how-steps .circle .list .item.blur .label {
+    opacity: 0.4;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
   .m_how-steps .circle .list .item:nth-child(2) {
     position: absolute;
     left: 75%;
     top: 300px;
-    padding-left: 85px;
+    padding-left: 0;
     width: auto;
   }
   .m_how-steps .circle .list .item:nth-child(2) .icon {
@@ -4107,7 +4393,8 @@ table tr:hover td {
     left: 0;
   }
   .m_how-steps .circle .list .item:nth-child(2) .label {
-    max-width: 120px;
+    max-width: 205px;
+    padding-left: 85px;
     text-align: left;
     display: inline-block;
     margin-top: 0;
@@ -4116,7 +4403,7 @@ table tr:hover td {
     position: absolute;
     left: -160px;
     top: 110px;
-    padding-right: 100px;
+    padding-right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(5) .icon {
     position: absolute;
@@ -4124,7 +4411,8 @@ table tr:hover td {
     right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(5) .label {
-    max-width: 150px;
+    padding-right: 100px;
+    max-width: 250px;
     text-align: right;
     display: inline-block;
   }
@@ -4132,7 +4420,7 @@ table tr:hover td {
     position: absolute;
     left: -180px;
     top: 480px;
-    padding-right: 90px;
+    padding-right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(1) .icon {
     position: absolute;
@@ -4140,7 +4428,8 @@ table tr:hover td {
     right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(1) .label {
-    max-width: 200px;
+    max-width: 290px;
+    padding-right: 90px;
     text-align: right;
     display: inline-block;
     margin-top: 20px;
@@ -4149,7 +4438,7 @@ table tr:hover td {
     position: absolute;
     left: -240px;
     top: 305px;
-    padding-right: 90px;
+    padding-right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(3) .icon {
     position: absolute;
@@ -4157,7 +4446,8 @@ table tr:hover td {
     right: 0;
   }
   .m_how-steps .circle .list .item:nth-child(3) .label {
-    max-width: 140px;
+    padding-right: 90px;
+    max-width: 230px;
     text-align: right;
     display: inline-block;
   }
@@ -4166,7 +4456,7 @@ table tr:hover td {
     left: 63%;
     width: auto;
     top: 110px;
-    padding-left: 130px;
+    padding-left: 0;
   }
   .m_how-steps .circle .list .item:nth-child(6) .icon {
     position: absolute;
@@ -4174,7 +4464,8 @@ table tr:hover td {
     left: 0;
   }
   .m_how-steps .circle .list .item:nth-child(6) .label {
-    max-width: 180px;
+    padding-left: 130px;
+    max-width: 310px;
     text-align: left;
     display: inline-block;
     margin-top: 0;
@@ -4184,7 +4475,7 @@ table tr:hover td {
     left: 67%;
     width: auto;
     top: 490px;
-    padding-left: 90px;
+    padding-left: 0;
   }
   .m_how-steps .circle .list .item:nth-child(4) .icon {
     position: absolute;
@@ -4192,7 +4483,8 @@ table tr:hover td {
     left: 0;
   }
   .m_how-steps .circle .list .item:nth-child(4) .label {
-    max-width: 180px;
+    padding-left: 90px;
+    max-width: 270px;
     text-align: left;
     display: inline-block;
     margin-top: 10px;
@@ -4232,6 +4524,14 @@ table tr:hover td {
 .m_how-steps .circle .list .item .icon {
   height: 70px;
   line-height: 70px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 992px) {
+  .m_how-steps .circle .list .item .icon {
+    -webkit-transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
 }
 .m_how-steps .circle .list .item .icon img {
   max-height: 100%;
@@ -4244,6 +4544,14 @@ table tr:hover td {
   font-weight: 600;
   font-size: 14px;
   line-height: 1.2;
+  cursor: pointer;
+}
+@media only screen and (min-width: 992px) {
+  .m_how-steps .circle .list .item .label {
+    -webkit-transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
 }
 @media only screen and (min-width: 480px) {
   .m_how-steps .circle .list .item .label {
@@ -4290,6 +4598,35 @@ table tr:hover td {
   text-align: center;
   margin-bottom: 15px;
 }
+.m_how-steps .network .network-carousel {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.m_how-steps .network .slick-arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  border: none;
+  text-indent: -9999px;
+  font-size: 0;
+  z-index: 2;
+}
+.m_how-steps .network .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../images/back.png") no-repeat 0 0;
+}
+.m_how-steps .network .slick-arrow.slick-next {
+  right: 0;
+  background: url("../images/next.png") no-repeat 0 0;
+}
+.m_how-steps .network .slick-slide {
+  margin: 0 10px;
+}
+.m_how-steps .network .slick-list {
+  margin: 0 -10px;
+}
 .m_how-steps .network .list:before,
 .m_how-steps .network .list:after {
   content: '';
@@ -4299,39 +4636,8 @@ table tr:hover td {
 .m_how-steps .network .list .item {
   float: left;
   height: 70px;
+  width: 100%;
   line-height: 70px;
-  width: 31.3%;
-  margin-left: 3%;
-  margin-bottom: 3%;
-}
-@media only screen and (min-width: 480px) {
-  .m_how-steps .network .list .item {
-    width: 22.66%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .m_how-steps .network .list .item {
-    width: 12.5;
-    width: 11.6%;
-    margin-left: 1%;
-    margin-bottom: 0;
-  }
-  .m_how-steps .network .list .item:nth-child(8n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-}
-@media screen and (max-width: 479px) {
-  .m_how-steps .network .list .item:nth-child(3n+1) {
-    clear: left;
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 991px) and (min-width: 480px) {
-  .m_how-steps .network .list .item:nth-child(4n+1) {
-    clear: left;
-    margin-left: 0;
-  }
 }
 .m_how-steps .network .list .item a {
   display: block;
@@ -5106,8 +5412,16 @@ table tr:hover td {
   .m_pluses .list .item {
     width: 32%;
   }
+  .m_pluses .list .item:hover .icon {
+    -webkit-animation: iconAnimInOut 1s;
+    -o-animation: iconAnimInOut 1s;
+    animation: iconAnimInOut 1s;
+  }
 }
 .m_pluses .list .item .icon {
+  -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   height: 130px;
   line-height: 130px;
   margin-bottom: 15px;
@@ -5217,6 +5531,51 @@ table tr:hover td {
 }
 .m_pluses.inverted .list .item .details a:hover {
   text-decoration: none;
+}
+@-webkit-keyframes iconAnimInOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-o-keyframes iconAnimInOut {
+  0% {
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes iconAnimInOut {
+  0% {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
 }
 .m_service-details {
   background: #f2fafc;
@@ -5347,13 +5706,13 @@ table tr:hover td {
 }
 @media only screen and (min-width: 1200px) {
   .m_sidebar-panel {
-    margin-left: -260px;
+    margin-left: -205px;
     left: 0;
     width: 50%;
   }
   .m_sidebar-panel .scroll .header,
   .m_sidebar-panel .scroll .body {
-    width: 330px;
+    width: 380px;
     margin-left: auto;
   }
   .m_sidebar-panel .scroll .header .bottom:after {
@@ -5391,6 +5750,11 @@ table tr:hover td {
   top: 50%;
   margin-top: -16px;
 }
+@media only screen and (min-width: 1200px) {
+  .m_sidebar-panel .header .actions a {
+    right: 60px;
+  }
+}
 .m_sidebar-panel .header .main-menu {
   width: 36px;
   height: 36px;
@@ -5408,6 +5772,11 @@ table tr:hover td {
 }
 .m_sidebar-panel .body {
   padding: 15px;
+}
+@media only screen and (min-width: 1200px) {
+  .m_sidebar-panel .body {
+    padding-right: 60px;
+  }
 }
 .m_sidebar-panel .body .actions {
   margin-bottom: 10px;
@@ -5989,6 +6358,33 @@ table tr:hover td {
 }
 .m_signup .signup-form .upload-item .files > div p br {
   display: none;
+}
+.signup-progressbar {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 10;
+  background: #1d5d8b;
+}
+.signup-progressbar .status {
+  display: block;
+  height: 100%;
+  background: #ea5b2e;
+}
+.signup-progressbar i {
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
 }
 .m_similar-articles {
   position: relative;

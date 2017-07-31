@@ -5,6 +5,13 @@
   background-size cover
   @media LG
     padding 60px 0
+  @keyframes iconAnimInOut
+    0%
+      transform scale(1)
+    50%
+      transform scale(0.9)
+    100%
+      transform scale(1)
   .list
     text-align center
     @media SM
@@ -15,7 +22,12 @@
       vertical-align top
       @media SM
         width 32%
+        &:hover
+          .icon
+            animation iconAnimInOut 1s
+
       .icon
+        anim()
         height 130px
         line-height 130px
         margin-bottom 15px

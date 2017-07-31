@@ -57,41 +57,51 @@ block content
         h2 Как это работает?
       .circle
         .round
+          .arcs
+            .line-top
+            .arc-1
+            .arc-2-1
+            .arc-2-2
+            .arc-3-1
+            .arc-3-2
+            .arc-4
+            .line-bottom
           .round-inner
             .round-image: img(src="images/circle/logo.png" alt="")
             .round-text <span class="strong">WO.TAXI</span> создает общий лицевой счет для всех сервисов такси
         .list
           .item
-            .icon(data-circle-message="Вывод денег ежедневно и еженедельно"): img(src="images/circle/5.png" alt="")
+            .icon(data-circle-image="images/circle/5b.png" data-circle-message="Вывод денег ежедневно и еженедельно"): img(src="images/circle/5.png" alt="")
             .label Вывод денег ежедневно <br>и еженедельно
           .item
-            .icon(data-circle-message="Пополнение бирж такси, не выходя из автомобиля"): img(src="images/circle/4.png" alt="")
+            .icon(data-circle-image="images/circle/4b.png" data-circle-message="Пополнение бирж такси, не выходя из автомобиля"): img(src="images/circle/4.png" alt="")
             .label Пополнение бирж такси, <br>не выходя из автомобиля
           .item
-            .icon(data-circle-message="Пополнение баланса WO.TAXI"): img(src="images/circle/3.png" alt="")
+            .icon(data-circle-image="images/circle/3b.png" data-circle-message="Пополнение баланса WO.TAXI"): img(src="images/circle/3.png" alt="")
             .label Пополнение баланса <br>WO.TAXI
           .item
-            .icon(data-circle-message="Автомойка, шиномонтаж и товары на АЗС"): img(src="images/circle/6.png" alt="")
+            .icon(data-circle-image="images/circle/6b.png" data-circle-message="Автомойка, шиномонтаж и товары на АЗС"): img(src="images/circle/6.png" alt="")
             .label Автомойка <br>Шиномонтаж <br>Товары на АЗС
           .item
-            .icon(data-circle-message="Помощь другу - Переводы внутри WO.TAXI"): img(src="images/circle/1.png" alt="")
+            .icon(data-circle-image="images/circle/1b.png" data-circle-message="Помощь другу - Переводы внутри WO.TAXI"): img(src="images/circle/1.png" alt="")
             .label Помощь другу <br>Переводы внутри WO.TAXI
           .item
-            .icon(data-circle-message="Топливные карты: заработок сразу без комисии доступен для заправки"): img(src="images/circle/2.png" alt="")
+            .icon(data-circle-image="images/circle/2b.png" data-circle-message="Топливные карты: заработок сразу без комисии доступен для заправки"): img(src="images/circle/2.png" alt="")
             .label Топливные карты: <br>заработок сразу без комисии доступен для заправки
       .network
         h3 Один или несколько сервисов такси, в которых вы работаете
         .list
-          .item: a(href="#"): img(src="images/network/1.png" alt="")
-          .item: a(href="#"): img(src="images/network/2.png" alt="")
-          .item: a(href="#"): img(src="images/network/3.png" alt="")
-          .item: a(href="#"): img(src="images/network/4.png" alt="")
-          .item: a(href="#"): img(src="images/network/5.png" alt="")
-          .item: a(href="#"): img(src="images/network/6.png" alt="")
-          .item: a(href="#"): img(src="images/network/7.png" alt="")
-          .item
-            a(class="custom" href="#")
-              span Ваша биржа такси
+          .network-carousel
+            .slide: .item: a(href="#"): img(src="images/network/1.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/2.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/3.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/4.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/5.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/6.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/7.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/8.png" alt="")
+            .slide: .item: a(href="#"): img(src="images/network/9.png" alt="")
+            .slide: .item: a(class="custom" href="#"): span Ваша биржа такси
   .m_story
     .text
       .wrapper

@@ -27,6 +27,7 @@ block content
             li: a(href="#") Требования для подключения
             li: a(href="#") Порядок действий для подключения
             li: a(href="#") Необходимые документы
+
         form(class="signup-form" id="singup-form")
           .step-1.is-active
             .sub-step.is-open
@@ -41,8 +42,8 @@ block content
                   input(class="input-driver mask-tel" type="tel" placeholder="Укажите номер телефона" required autocomplete="off")
               .form-row
                 label
-                  span.label Введите ваш адрес электронной почты<span class="required">*</span>
-                  input(class="input-driver" type="email" placeholder="Укажите email" required autocomplete="off")
+                  span.label Введите ваш адрес электронной почты
+                  input(class="input-driver" type="email" placeholder="Укажите email" autocomplete="off")
             .sub-step
               .step-title Данные об автомобиле
               .form-row
@@ -126,3 +127,6 @@ block content
               .step-final
                 button(id="step-1-submit" type="submit" class="btn btn-orange" data-next="upload") Продолжить
 
+    .signup-progressbar
+      span(class="status" style="width: 33.333%")
+      i <span>1</span> из 3
